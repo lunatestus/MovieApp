@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#FFFFBB00</color>
+    <color name="background_dark">#FF0A0A0A</color>
+    <color name="black">#FF000000</color>
+    <color name="brand_color">#FF1A1A1A</color>
+    <color name="card_background">#FF1A1A1A</color>
+    <color name="navbar_background">#FF1A1A1A</color>
+    <color name="navbar_text">#CCFFFFFF</color>
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFAAAAAA</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="browse_rows_vertical_spacing">-5dp</dimen>
+    <dimen name="movie_card_height">330dp</dimen>
+    <dimen name="movie_card_margin">3dp</dimen>
+    <dimen name="movie_card_selected_elevation">16dp</dimen>
+    <dimen name="movie_card_width">220dp</dimen>
+    <dimen name="navbar_height">42dp</dimen>
+    <dimen name="navbar_icon_size">16dp</dimen>
+    <dimen name="navbar_icon_size_large">18dp</dimen>
+    <dimen name="navbar_item_icon_margin">8dp</dimen>
+    <dimen name="navbar_item_padding_horizontal">12dp</dimen>
+    <dimen name="navbar_item_padding_vertical">6dp</dimen>
+    <dimen name="navbar_item_spacing">12dp</dimen>
+    <dimen name="navbar_padding_horizontal">48dp</dimen>
+    <dimen name="navbar_selector_radius">50dp</dimen>
+    <dimen name="navbar_text_size">12sp</dimen>
+    <dimen name="navbar_utility_padding">8dp</dimen>
+    <dimen name="navbar_utility_spacing">8dp</dimen>
+    <dimen name="row_header_height">28dp</dimen>
+    <dimen name="row_header_margin_bottom">-5dp</dimen>
+    <dimen name="row_header_margin_top">-5dp</dimen>
+    <dimen name="row_margin_bottom">-5dp</dimen>
+    <dimen name="row_margin_top">-5dp</dimen>
+    <string name="app_name">MovieApp</string>
+    <string name="browse_title">Movies</string>
+    <string name="error_loading">Error loading movies</string>
+    <string name="latest_releases">Latest Releases</string>
+    <string name="loading">Loading...</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="upcoming">Upcoming</string>
+    <style name="CustomRowHeader" parent="Widget.Leanback.Row.Header">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+    <style name="Theme.Leanback" parent="Theme.Leanback.Browse">
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:colorPrimary">@color/black</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:fontFamily">@font/dm_sans_family</item>
+        <item name="fontFamily">@font/dm_sans_family</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="rowHeaderStyle">@style/CustomRowHeader</item>
+    </style>
+</resources>

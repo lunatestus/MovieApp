@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navbar Dimensions -->
+    <dimen name="navbar_height">42dp</dimen>
+    <dimen name="navbar_padding_horizontal">48dp</dimen>
+    <dimen name="navbar_item_padding_horizontal">12dp</dimen>
+    <dimen name="navbar_item_padding_vertical">6dp</dimen>
+    <dimen name="navbar_item_spacing">12dp</dimen>
+    <dimen name="navbar_icon_size">16dp</dimen>
+    <dimen name="navbar_icon_size_large">18dp</dimen>
+    <dimen name="navbar_text_size">12sp</dimen>
+    <dimen name="navbar_item_icon_margin">8dp</dimen>
+    <dimen name="navbar_utility_padding">8dp</dimen>
+    <dimen name="navbar_utility_spacing">8dp</dimen>
+    <dimen name="navbar_selector_radius">50dp</dimen>
+
+    <!-- Card Dimensions -->
+    <dimen name="movie_card_width">220dp</dimen>
+    <dimen name="movie_card_height">330dp</dimen>
+    <dimen name="movie_card_margin">3dp</dimen>
+    <dimen name="movie_card_selected_elevation">16dp</dimen>
+    
+    <!-- List Row Dimensions -->
+    <dimen name="row_header_height">28dp</dimen>
+    <dimen name="row_header_margin_top">-5dp</dimen>
+    <dimen name="row_header_margin_bottom">-5dp</dimen>
+    <dimen name="row_margin_top">-5dp</dimen>
+    <dimen name="row_margin_bottom">-5dp</dimen>
+    <dimen name="browse_rows_vertical_spacing">-5dp</dimen>
+</resources>
