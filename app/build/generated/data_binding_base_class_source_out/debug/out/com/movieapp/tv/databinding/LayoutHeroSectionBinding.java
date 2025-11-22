@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +31,9 @@ public final class LayoutHeroSectionBinding implements ViewBinding {
   public final TextView heroLanguage;
 
   @NonNull
+  public final LinearLayout heroMetadataContainer;
+
+  @NonNull
   public final TextView heroRating;
 
   @NonNull
@@ -40,12 +44,13 @@ public final class LayoutHeroSectionBinding implements ViewBinding {
 
   private LayoutHeroSectionBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageView heroBackground, @NonNull TextView heroDescription,
-      @NonNull TextView heroLanguage, @NonNull TextView heroRating, @NonNull TextView heroTitle,
-      @NonNull TextView heroYear) {
+      @NonNull TextView heroLanguage, @NonNull LinearLayout heroMetadataContainer,
+      @NonNull TextView heroRating, @NonNull TextView heroTitle, @NonNull TextView heroYear) {
     this.rootView = rootView;
     this.heroBackground = heroBackground;
     this.heroDescription = heroDescription;
     this.heroLanguage = heroLanguage;
+    this.heroMetadataContainer = heroMetadataContainer;
     this.heroRating = heroRating;
     this.heroTitle = heroTitle;
     this.heroYear = heroYear;
@@ -96,6 +101,12 @@ public final class LayoutHeroSectionBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.hero_metadata_container;
+      LinearLayout heroMetadataContainer = ViewBindings.findChildViewById(rootView, id);
+      if (heroMetadataContainer == null) {
+        break missingId;
+      }
+
       id = R.id.hero_rating;
       TextView heroRating = ViewBindings.findChildViewById(rootView, id);
       if (heroRating == null) {
@@ -115,7 +126,7 @@ public final class LayoutHeroSectionBinding implements ViewBinding {
       }
 
       return new LayoutHeroSectionBinding((ConstraintLayout) rootView, heroBackground,
-          heroDescription, heroLanguage, heroRating, heroTitle, heroYear);
+          heroDescription, heroLanguage, heroMetadataContainer, heroRating, heroTitle, heroYear);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

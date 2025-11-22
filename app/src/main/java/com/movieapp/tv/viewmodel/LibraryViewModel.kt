@@ -1,6 +1,7 @@
 package com.movieapp.tv.viewmodel
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.movieapp.tv.model.Movie
 import com.movieapp.tv.repository.LibraryRepository
@@ -15,9 +16,9 @@ sealed class LibraryUiState {
     data class Error(val message: String) : LibraryUiState()
 }
 
-class LibraryViewModel : ViewModel() {
+class LibraryViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val repository = LibraryRepository()
+    private val repository = LibraryRepository(application)
     
     private val _uiState = MutableStateFlow<LibraryUiState>(LibraryUiState.Loading)
     val uiState: StateFlow<LibraryUiState> = _uiState.asStateFlow()

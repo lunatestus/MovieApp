@@ -3982,6 +3982,7 @@ id browse_headers
 id browse_headers_dock
 id browse_headers_root
 id browse_title_group
+id btn_save_settings
 id button
 id buttonPanel
 id button_start
@@ -4094,6 +4095,7 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id error_frame
+id et_library_url
 id exitUntilCollapsed
 id exo_ad_overlay
 id exo_artwork
@@ -4214,6 +4216,7 @@ id header_title
 id hero_background
 id hero_description
 id hero_language
+id hero_metadata_container
 id hero_rating
 id hero_section
 id hero_title
@@ -4779,6 +4782,7 @@ layout activity_details
 layout activity_library
 layout activity_main
 layout activity_player
+layout activity_settings
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

@@ -1,5 +1,7 @@
 package com.movieapp.tv.api
 
+import android.content.Context
+import com.movieapp.tv.utils.PreferencesManager
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -7,10 +9,14 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
     private const val BASE_URL = "https://api.themoviedb.org/3/"
-    private const val LIBRARY_BASE_URL = "https://yashkushwahayt--modal-video-uploader-flask-app.modal.run/"
+    private const val DISCOVERY_URL = "https://yashkushwahayt--modal-video-uploader-get-app-url-dev.modal.run/"
     private const val CONNECT_TIMEOUT = 30L
     private const val READ_TIMEOUT = 30L
     private const val WRITE_TIMEOUT = 30L
+    
+    private var currentLibraryUrl: String? = null
+    private var libraryRetrofit: Retrofit? = null
+    private var _libraryApi: LibraryApi? = null
     
     private val okHttpClient: OkHttpClient by lazy {
         OkHttpClient.Builder()
@@ -30,12 +36,30 @@ object RetrofitClient {
             .create(TmdbApi::class.java)
     }
 
-    val libraryApi: LibraryApi by lazy {
+    val discoveryApi: DiscoveryApi by lazy {
         Retrofit.Builder()
-            .baseUrl(LIBRARY_BASE_URL)
+            .baseUrl(DISCOVERY_URL)
+            .client(okHttpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(DiscoveryApi::class.java)
+    }
+
+    fun createLibraryApi(baseUrl: String): LibraryApi {
+        // Ensure URL ends with /
+        val safeUrl = if (baseUrl.endsWith("/")) baseUrl else "$baseUrl/"
+        
+        return Retrofit.Builder()
+            .baseUrl(safeUrl)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(LibraryApi::class.java)
+    }
+
+    fun getLibraryApi(context: Context): LibraryApi {
+        // Legacy method, might be deprecated or used as fallback
+        val savedUrl = PreferencesManager.getLibraryUrl(context)
+        return createLibraryApi(savedUrl)
     }
 }

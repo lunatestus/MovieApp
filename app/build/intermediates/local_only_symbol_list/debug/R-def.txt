@@ -56,6 +56,8 @@ font space_mono_italic
 font space_mono_regular
 id back_button
 id browse_fragment
+id btn_save_settings
+id et_library_url
 id guideline
 id header_info_container
 id header_movie_rating
@@ -64,6 +66,7 @@ id header_movie_year
 id hero_background
 id hero_description
 id hero_language
+id hero_metadata_container
 id hero_rating
 id hero_section
 id hero_title
@@ -95,6 +98,7 @@ layout activity_details
 layout activity_library
 layout activity_main
 layout activity_player
+layout activity_settings
 layout layout_hero_section
 layout movie_header
 layout navbar_layout

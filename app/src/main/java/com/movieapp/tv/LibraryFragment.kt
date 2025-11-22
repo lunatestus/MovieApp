@@ -31,10 +31,10 @@ class LibraryFragment : RowsSupportFragment() {
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // Set padding to match MainActivity alignment
-        val navbarHeight = resources.getDimensionPixelSize(R.dimen.navbar_height)
-        // Add extra padding to push content below navbar
-        val topPadding = navbarHeight + (20 * resources.displayMetrics.density).toInt()
+        
+        // Set padding to match visual preference
+        // Since fragment is constrained below navbar, we just need a small offset
+        val topPadding = (20 * resources.displayMetrics.density).toInt()
         
         // Access VerticalGridView to set padding and alignment
         findVerticalGridView(view)?.apply {

@@ -37,6 +37,7 @@ class MainActivity : FragmentActivity() {
     private lateinit var heroYear: TextView
     private lateinit var heroLanguage: TextView
     private lateinit var heroBackground: ImageView
+    private lateinit var heroMetadataContainer: View
 
     companion object {
         private const val TAG = "MainActivity"
@@ -58,6 +59,7 @@ class MainActivity : FragmentActivity() {
         heroYear = findViewById(R.id.hero_year)
         heroLanguage = findViewById(R.id.hero_language)
         heroBackground = findViewById(R.id.hero_background)
+        heroMetadataContainer = findViewById(R.id.hero_metadata_container)
         
         setupUI()
         setupNavbar()
@@ -86,6 +88,7 @@ class MainActivity : FragmentActivity() {
     }
 
     private fun updateHeroSection(movie: Movie) {
+        heroMetadataContainer.visibility = View.VISIBLE
         heroTitle.text = movie.title
         heroDescription.text = movie.overview
         heroRating.text = movie.getFormattedRating()
