@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.movieapp.tv.app-mergeDebugResources-35:/values-or/values-or.xml",
+            "outputFile": "com.movieapp.tv.app-mergeDebugResources-38:/values-or/values-or.xml",
             "map": [
                 {
                     "source": "/home/zeus/.gradle/caches/transforms-3/c1edc948bdf0c8c8cdd2452e5dbc40f1/transformed/leanback-1.0.0/res/values-or/values-or.xml",

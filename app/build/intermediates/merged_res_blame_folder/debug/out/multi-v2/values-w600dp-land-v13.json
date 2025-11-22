@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.movieapp.tv.app-mergeDebugResources-35:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "outputFile": "com.movieapp.tv.app-mergeDebugResources-38:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
                     "source": "/home/zeus/.gradle/caches/transforms-3/76947f2dda4873f4ff357d73f51effc0/transformed/material-1.11.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",

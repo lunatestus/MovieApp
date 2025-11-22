@@ -68,6 +68,8 @@ id hero_rating
 id hero_section
 id hero_title
 id hero_year
+id library_fragment
+id loading_indicator
 id movie_backdrop
 id movie_header
 id movie_overview
@@ -87,9 +89,12 @@ id nav_settings
 id nav_settings_icon
 id navbar
 id page_title
+id player_view
 layout activity_coming_soon
 layout activity_details
+layout activity_library
 layout activity_main
+layout activity_player
 layout layout_hero_section
 layout movie_header
 layout navbar_layout

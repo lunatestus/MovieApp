@@ -64,6 +64,11 @@
             android:name="com.movieapp.tv.SettingsActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
+        <activity
+            android:name="com.movieapp.tv.PlayerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:exported="false"
+            android:screenOrientation="landscape" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

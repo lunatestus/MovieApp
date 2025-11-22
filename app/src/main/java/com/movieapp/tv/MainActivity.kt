@@ -62,6 +62,9 @@ class MainActivity : FragmentActivity() {
         setupUI()
         setupNavbar()
         observeViewModel()
+
+        // Focus on Home button initially
+        findViewById<LinearLayout>(R.id.nav_home).requestFocus()
     }
 
     private fun setupUI() {

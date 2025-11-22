@@ -28,7 +28,10 @@ data class Movie(
     val originalLanguage: String?,
 
     @SerializedName("genre_ids")
-    val genreIds: List<Int>
+    val genreIds: List<Int>,
+
+    // Not part of TMDB API, used for Library items
+    var videoUrl: String? = null
 ) {
     fun getPosterUrl(): String {
         return "https://image.tmdb.org/t/p/w500$posterPath"

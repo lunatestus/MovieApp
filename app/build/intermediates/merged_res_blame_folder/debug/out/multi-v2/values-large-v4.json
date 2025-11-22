@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.movieapp.tv.app-mergeDebugResources-35:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.movieapp.tv.app-mergeDebugResources-38:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
                     "source": "/home/zeus/.gradle/caches/transforms-3/9280386eeb9849e58ccfe273753cebc6/transformed/appcompat-1.6.1/res/values-large-v4/values-large-v4.xml",

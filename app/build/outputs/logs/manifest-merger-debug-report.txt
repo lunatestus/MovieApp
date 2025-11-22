@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-58:12
-INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-58:12
-INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-58:12
-INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-58:12
+ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-64:12
 MERGED from [androidx.databinding:viewbinding:8.1.0] /home/zeus/.gradle/caches/transforms-3/629a4ff7eac016482d0d280321f91aab/transformed/jetified-viewbinding-8.1.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] /home/zeus/.gradle/caches/transforms-3/76947f2dda4873f4ff357d73f51effc0/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/zeus/.gradle/caches/transforms-3/6de17af1fafef4018d975c87f851457b/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
@@ -27,18 +27,27 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/zeus/.gradle/cach
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /home/zeus/.gradle/caches/transforms-3/255bce6b5eb237c4f546869f3f8a6121/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/zeus/.gradle/caches/transforms-3/19fb1634e963e28a954913b547e4a5c9/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /home/zeus/.gradle/caches/transforms-3/d6d89abe621fd41ed99410b7ee9568c0/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-exoplayer:1.2.0] /home/zeus/.gradle/caches/transforms-3/6dd9aab381d21082f91ffb52af8849df/transformed/jetified-media3-exoplayer-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media3:media3-extractor:1.2.0] /home/zeus/.gradle/caches/transforms-3/b1b3b7f84d305b2c19dfa5b0fbf670a1/transformed/jetified-media3-extractor-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-container:1.2.0] /home/zeus/.gradle/caches/transforms-3/f75d2cf2315d2bcd02b8e3ee3c757dd8/transformed/jetified-media3-container-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-datasource:1.2.0] /home/zeus/.gradle/caches/transforms-3/8f730ccb9152e70c97929d7efcae2b0a/transformed/jetified-media3-datasource-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-decoder:1.2.0] /home/zeus/.gradle/caches/transforms-3/223cae28f35aa1995d24fd0338039487/transformed/jetified-media3-decoder-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-database:1.2.0] /home/zeus/.gradle/caches/transforms-3/d9ee8f1beb8d276a1b2f6eb10ff130e4/transformed/jetified-media3-database-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-common:1.2.0] /home/zeus/.gradle/caches/transforms-3/93053d390ff4d8a7817804e38a2a9c63/transformed/jetified-media3-common-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media3:media3-ui:1.2.0] /home/zeus/.gradle/caches/transforms-3/b87d3ed08cf5d240dc6f73cd22b1b002/transformed/jetified-media3-ui-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.0] /home/zeus/.gradle/caches/transforms-3/382cb275f0138f0822409d780d5bbb69/transformed/recyclerview-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/zeus/.gradle/caches/transforms-3/11b388dd4aec6d9b54e3602354368699/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.core:core-ktx:1.12.0] /home/zeus/.gradle/caches/transforms-3/d06412960ba4d08e064a44c054c185c4/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.media:media:1.0.0] /home/zeus/.gradle/caches/transforms-3/124738f753342b5d9f0d8af3b85f1d77/transformed/media-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/zeus/.gradle/caches/transforms-3/3d657aac24a1bffd6d63383cfbe6b058/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/zeus/.gradle/caches/transforms-3/8de7845006d900ef2d34e7cec1e14c11/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.2.0] /home/zeus/.gradle/caches/transforms-3/641314942f6c7d030f4cf7b6bda25388/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/zeus/.gradle/caches/transforms-3/db007dde449615b7112f5365a1507624/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/zeus/.gradle/caches/transforms-3/7de814ce429372a5de92ae2ab69410ab/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.6.0] /home/zeus/.gradle/caches/transforms-3/0b590628e62f0fed8866173cd27974e9/transformed/media-1.6.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/zeus/.gradle/caches/transforms-3/53713330af8905b13125428c03861cd9/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/zeus/.gradle/caches/transforms-3/cace014dc459901c8e51aaf822fa43cd/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/zeus/.gradle/caches/transforms-3/47ce70c0ada50741dfe9d815dd69f0be/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/zeus/.gradle/caches/transforms-3/770b63cce93c0274d362bf2d0f4af547/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/zeus/.gradle/caches/transforms-3/54254f9a3e184b1bb3adac8e02d68aa2/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.1.0] /home/zeus/.gradle/caches/transforms-3/c0059f674632121960225c3a19e29702/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.12.0] /home/zeus/.gradle/caches/transforms-3/a02af45ee381eb3587200483e4a20c77/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /home/zeus/.gradle/caches/transforms-3/7e8990a4fde5ac3beed11fb15b5d1266/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
@@ -51,13 +60,13 @@ MERGED from [androidx.exifinterface:exifinterface:1.3.6] /home/zeus/.gradle/cach
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/zeus/.gradle/caches/transforms-3/409acb17ac08d5bfd510839c885b2c33/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] /home/zeus/.gradle/caches/transforms-3/47d1ac38417517385d7f60bda91e8c0a/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] /home/zeus/.gradle/caches/transforms-3/ccd6617a137f8ab70f94e9ec43807ade/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/zeus/.gradle/caches/transforms-3/0690ec13b66ed538be8345de6c0a1db4/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/zeus/.gradle/caches/transforms-3/fe25c58a9394905f4373e6219ad836de/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/zeus/.gradle/caches/transforms-3/0690ec13b66ed538be8345de6c0a1db4/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/zeus/.gradle/caches/transforms-3/4f961319d4aed48586da84f3535dabf5/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/zeus/.gradle/caches/transforms-3/9e6920d78fca14dc52da227f1dc26e64/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/zeus/.gradle/caches/transforms-3/b7293eea89a818723e238a94e18ac54b/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/zeus/.gradle/caches/transforms-3/8c948520dbf2dec61bd6c9ed18f6093e/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/zeus/.gradle/caches/transforms-3/ec262d5dd80ed8803f01a8338c2fb539/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] /home/zeus/.gradle/caches/transforms-3/0fdf80c9aec9eeb9e314f8db28444a0c/transformed/jetified-annotation-experimental-1.3.1/AndroidManifest.xml:17:1-22:12
 	package
 		INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -72,6 +81,10 @@ ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:5:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.2.0] /home/zeus/.gradle/caches/transforms-3/6dd9aab381d21082f91ffb52af8849df/transformed/jetified-media3-exoplayer-1.2.0/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.2.0] /home/zeus/.gradle/caches/transforms-3/6dd9aab381d21082f91ffb52af8849df/transformed/jetified-media3-exoplayer-1.2.0/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-common:1.2.0] /home/zeus/.gradle/caches/transforms-3/93053d390ff4d8a7817804e38a2a9c63/transformed/jetified-media3-common-1.2.0/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-common:1.2.0] /home/zeus/.gradle/caches/transforms-3/93053d390ff4d8a7817804e38a2a9c63/transformed/jetified-media3-common-1.2.0/AndroidManifest.xml:22:5-79
 	android:name
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:5:22-76
 uses-feature#android.hardware.touchscreen
@@ -87,8 +100,8 @@ ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:11:9-49
 application
-ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:14:5-56:19
-INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:14:5-56:19
+ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:14:5-62:19
+INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:14:5-62:19
 MERGED from [com.google.android.material:material:1.11.0] /home/zeus/.gradle/caches/transforms-3/76947f2dda4873f4ff357d73f51effc0/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /home/zeus/.gradle/caches/transforms-3/76947f2dda4873f4ff357d73f51effc0/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/zeus/.gradle/caches/transforms-3/6de17af1fafef4018d975c87f851457b/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -179,6 +192,16 @@ ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:54:13-37
 	android:name
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:53:13-45
+activity#com.movieapp.tv.PlayerActivity
+ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:57:9-61:125
+	android:screenOrientation
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:60:13-50
+	android:exported
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:59:13-37
+	android:configChanges
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:61:13-122
+	android:name
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:58:13-43
 uses-sdk
 INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml
@@ -229,10 +252,28 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/zeus/.gradle/ca
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/zeus/.gradle/caches/transforms-3/19fb1634e963e28a954913b547e4a5c9/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /home/zeus/.gradle/caches/transforms-3/d6d89abe621fd41ed99410b7ee9568c0/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /home/zeus/.gradle/caches/transforms-3/d6d89abe621fd41ed99410b7ee9568c0/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.2.0] /home/zeus/.gradle/caches/transforms-3/6dd9aab381d21082f91ffb52af8849df/transformed/jetified-media3-exoplayer-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.2.0] /home/zeus/.gradle/caches/transforms-3/6dd9aab381d21082f91ffb52af8849df/transformed/jetified-media3-exoplayer-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-extractor:1.2.0] /home/zeus/.gradle/caches/transforms-3/b1b3b7f84d305b2c19dfa5b0fbf670a1/transformed/jetified-media3-extractor-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-extractor:1.2.0] /home/zeus/.gradle/caches/transforms-3/b1b3b7f84d305b2c19dfa5b0fbf670a1/transformed/jetified-media3-extractor-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.2.0] /home/zeus/.gradle/caches/transforms-3/f75d2cf2315d2bcd02b8e3ee3c757dd8/transformed/jetified-media3-container-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.2.0] /home/zeus/.gradle/caches/transforms-3/f75d2cf2315d2bcd02b8e3ee3c757dd8/transformed/jetified-media3-container-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.2.0] /home/zeus/.gradle/caches/transforms-3/8f730ccb9152e70c97929d7efcae2b0a/transformed/jetified-media3-datasource-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.2.0] /home/zeus/.gradle/caches/transforms-3/8f730ccb9152e70c97929d7efcae2b0a/transformed/jetified-media3-datasource-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.2.0] /home/zeus/.gradle/caches/transforms-3/223cae28f35aa1995d24fd0338039487/transformed/jetified-media3-decoder-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.2.0] /home/zeus/.gradle/caches/transforms-3/223cae28f35aa1995d24fd0338039487/transformed/jetified-media3-decoder-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.2.0] /home/zeus/.gradle/caches/transforms-3/d9ee8f1beb8d276a1b2f6eb10ff130e4/transformed/jetified-media3-database-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.2.0] /home/zeus/.gradle/caches/transforms-3/d9ee8f1beb8d276a1b2f6eb10ff130e4/transformed/jetified-media3-database-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.2.0] /home/zeus/.gradle/caches/transforms-3/93053d390ff4d8a7817804e38a2a9c63/transformed/jetified-media3-common-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.2.0] /home/zeus/.gradle/caches/transforms-3/93053d390ff4d8a7817804e38a2a9c63/transformed/jetified-media3-common-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-ui:1.2.0] /home/zeus/.gradle/caches/transforms-3/b87d3ed08cf5d240dc6f73cd22b1b002/transformed/jetified-media3-ui-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-ui:1.2.0] /home/zeus/.gradle/caches/transforms-3/b87d3ed08cf5d240dc6f73cd22b1b002/transformed/jetified-media3-ui-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.0] /home/zeus/.gradle/caches/transforms-3/382cb275f0138f0822409d780d5bbb69/transformed/recyclerview-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.0] /home/zeus/.gradle/caches/transforms-3/382cb275f0138f0822409d780d5bbb69/transformed/recyclerview-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/zeus/.gradle/caches/transforms-3/11b388dd4aec6d9b54e3602354368699/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/zeus/.gradle/caches/transforms-3/11b388dd4aec6d9b54e3602354368699/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
 MERGED from [androidx.core:core-ktx:1.12.0] /home/zeus/.gradle/caches/transforms-3/d06412960ba4d08e064a44c054c185c4/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.12.0] /home/zeus/.gradle/caches/transforms-3/d06412960ba4d08e064a44c054c185c4/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.media:media:1.0.0] /home/zeus/.gradle/caches/transforms-3/124738f753342b5d9f0d8af3b85f1d77/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/zeus/.gradle/caches/transforms-3/124738f753342b5d9f0d8af3b85f1d77/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/zeus/.gradle/caches/transforms-3/3d657aac24a1bffd6d63383cfbe6b058/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/zeus/.gradle/caches/transforms-3/3d657aac24a1bffd6d63383cfbe6b058/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/zeus/.gradle/caches/transforms-3/8de7845006d900ef2d34e7cec1e14c11/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -243,6 +284,8 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/zeus/.
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/zeus/.gradle/caches/transforms-3/db007dde449615b7112f5365a1507624/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/zeus/.gradle/caches/transforms-3/7de814ce429372a5de92ae2ab69410ab/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/zeus/.gradle/caches/transforms-3/7de814ce429372a5de92ae2ab69410ab/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.6.0] /home/zeus/.gradle/caches/transforms-3/0b590628e62f0fed8866173cd27974e9/transformed/media-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.6.0] /home/zeus/.gradle/caches/transforms-3/0b590628e62f0fed8866173cd27974e9/transformed/media-1.6.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/zeus/.gradle/caches/transforms-3/53713330af8905b13125428c03861cd9/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/zeus/.gradle/caches/transforms-3/53713330af8905b13125428c03861cd9/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/zeus/.gradle/caches/transforms-3/cace014dc459901c8e51aaf822fa43cd/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
@@ -251,8 +294,6 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/zeus/.g
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/zeus/.gradle/caches/transforms-3/47ce70c0ada50741dfe9d815dd69f0be/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/zeus/.gradle/caches/transforms-3/770b63cce93c0274d362bf2d0f4af547/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/zeus/.gradle/caches/transforms-3/770b63cce93c0274d362bf2d0f4af547/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/zeus/.gradle/caches/transforms-3/54254f9a3e184b1bb3adac8e02d68aa2/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/zeus/.gradle/caches/transforms-3/54254f9a3e184b1bb3adac8e02d68aa2/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] /home/zeus/.gradle/caches/transforms-3/c0059f674632121960225c3a19e29702/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] /home/zeus/.gradle/caches/transforms-3/c0059f674632121960225c3a19e29702/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.12.0] /home/zeus/.gradle/caches/transforms-3/a02af45ee381eb3587200483e4a20c77/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
@@ -277,10 +318,10 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/zeus/.gradle/caches/t
 MERGED from [androidx.startup:startup-runtime:1.1.1] /home/zeus/.gradle/caches/transforms-3/47d1ac38417517385d7f60bda91e8c0a/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.0.0] /home/zeus/.gradle/caches/transforms-3/ccd6617a137f8ab70f94e9ec43807ade/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] /home/zeus/.gradle/caches/transforms-3/ccd6617a137f8ab70f94e9ec43807ade/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/zeus/.gradle/caches/transforms-3/0690ec13b66ed538be8345de6c0a1db4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/zeus/.gradle/caches/transforms-3/0690ec13b66ed538be8345de6c0a1db4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/zeus/.gradle/caches/transforms-3/fe25c58a9394905f4373e6219ad836de/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/zeus/.gradle/caches/transforms-3/fe25c58a9394905f4373e6219ad836de/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/zeus/.gradle/caches/transforms-3/0690ec13b66ed538be8345de6c0a1db4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/zeus/.gradle/caches/transforms-3/0690ec13b66ed538be8345de6c0a1db4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/zeus/.gradle/caches/transforms-3/4f961319d4aed48586da84f3535dabf5/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/zeus/.gradle/caches/transforms-3/4f961319d4aed48586da84f3535dabf5/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/zeus/.gradle/caches/transforms-3/9e6920d78fca14dc52da227f1dc26e64/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
@@ -289,8 +330,8 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/z
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/zeus/.gradle/caches/transforms-3/b7293eea89a818723e238a94e18ac54b/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/zeus/.gradle/caches/transforms-3/8c948520dbf2dec61bd6c9ed18f6093e/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/zeus/.gradle/caches/transforms-3/8c948520dbf2dec61bd6c9ed18f6093e/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/zeus/.gradle/caches/transforms-3/ec262d5dd80ed8803f01a8338c2fb539/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/zeus/.gradle/caches/transforms-3/ec262d5dd80ed8803f01a8338c2fb539/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] /home/zeus/.gradle/caches/transforms-3/0fdf80c9aec9eeb9e314f8db28444a0c/transformed/jetified-annotation-experimental-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] /home/zeus/.gradle/caches/transforms-3/0fdf80c9aec9eeb9e314f8db28444a0c/transformed/jetified-annotation-experimental-1.3.1/AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
 		INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
