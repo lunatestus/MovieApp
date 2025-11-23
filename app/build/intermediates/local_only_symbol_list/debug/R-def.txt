@@ -46,6 +46,7 @@ drawable ic_settings
 drawable movie_placeholder
 drawable navbar_background
 drawable navbar_item_selector
+drawable skeleton_background
 font dm_sans
 font dm_sans_family
 font dm_sans_regular
@@ -72,7 +73,6 @@ id hero_section
 id hero_title
 id hero_year
 id library_fragment
-id loading_indicator
 id movie_backdrop
 id movie_header
 id movie_overview
@@ -99,6 +99,7 @@ layout activity_library
 layout activity_main
 layout activity_player
 layout activity_settings
+layout item_skeleton
 layout layout_hero_section
 layout movie_header
 layout navbar_layout

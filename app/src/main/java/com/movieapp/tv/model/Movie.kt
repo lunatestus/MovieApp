@@ -7,7 +7,10 @@ data class Movie(
     val id: Int,
     
     @SerializedName("title")
-    val title: String,
+    private val _title: String?,
+
+    @SerializedName("name")
+    private val _name: String?,
     
     @SerializedName("overview")
     val overview: String,
@@ -22,17 +25,26 @@ data class Movie(
     val voteAverage: Double,
     
     @SerializedName("release_date")
-    val releaseDate: String,
+    private val _releaseDate: String?,
+
+    @SerializedName("first_air_date")
+    private val _firstAirDate: String?,
     
     @SerializedName("original_language")
     val originalLanguage: String?,
 
     @SerializedName("genre_ids")
-    val genreIds: List<Int>,
+    val genreIds: List<Int> = emptyList(),
 
     // Not part of TMDB API, used for Library items
     var videoUrl: String? = null
 ) {
+    val title: String
+        get() = _title ?: _name ?: "Unknown Title"
+
+    val releaseDate: String
+        get() = _releaseDate ?: _firstAirDate ?: ""
+
     fun getPosterUrl(): String {
         return "https://image.tmdb.org/t/p/w500$posterPath"
     }

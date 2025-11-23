@@ -14,6 +14,11 @@ class LibraryRepository(private val context: Context) {
 
     companion object {
         private const val TAG = "LibraryRepository"
+        private var cachedMovies: List<Movie> = emptyList()
+    }
+
+    fun getCachedMovies(): List<Movie> {
+        return cachedMovies
     }
 
     suspend fun getLibraryMovies(): List<Movie> = withContext(Dispatchers.IO) {
@@ -55,7 +60,7 @@ class LibraryRepository(private val context: Context) {
                     }
                 }
             }
-            movies
+            movies.also { cachedMovies = it }
         } catch (e: Exception) {
             Log.e(TAG, "Error fetching library files", e)
             emptyList()

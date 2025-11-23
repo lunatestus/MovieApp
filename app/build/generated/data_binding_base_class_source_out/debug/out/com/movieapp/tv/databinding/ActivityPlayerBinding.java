@@ -4,7 +4,6 @@ package com.movieapp.tv.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,15 +20,11 @@ public final class ActivityPlayerBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ProgressBar loadingIndicator;
-
-  @NonNull
   public final PlayerView playerView;
 
   private ActivityPlayerBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ProgressBar loadingIndicator, @NonNull PlayerView playerView) {
+      @NonNull PlayerView playerView) {
     this.rootView = rootView;
-    this.loadingIndicator = loadingIndicator;
     this.playerView = playerView;
   }
 
@@ -60,19 +55,13 @@ public final class ActivityPlayerBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.loading_indicator;
-      ProgressBar loadingIndicator = ViewBindings.findChildViewById(rootView, id);
-      if (loadingIndicator == null) {
-        break missingId;
-      }
-
       id = R.id.player_view;
       PlayerView playerView = ViewBindings.findChildViewById(rootView, id);
       if (playerView == null) {
         break missingId;
       }
 
-      return new ActivityPlayerBinding((ConstraintLayout) rootView, loadingIndicator, playerView);
+      return new ActivityPlayerBinding((ConstraintLayout) rootView, playerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

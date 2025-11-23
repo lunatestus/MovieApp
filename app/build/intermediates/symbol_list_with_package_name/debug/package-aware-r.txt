@@ -3832,6 +3832,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable skeleton_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -4294,7 +4295,6 @@ id line3
 id linear
 id listMode
 id list_item
-id loading_indicator
 id logo
 id m3_side_sheet
 id main
@@ -4811,6 +4811,7 @@ layout exo_styled_sub_settings_list_item
 layout exo_track_selection_dialog
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_skeleton
 layout layout_hero_section
 layout lb_action_1_line
 layout lb_action_2_lines

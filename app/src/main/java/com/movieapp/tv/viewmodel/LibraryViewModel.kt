@@ -29,10 +29,28 @@ class LibraryViewModel(application: Application) : AndroidViewModel(application)
 
     fun loadLibrary() {
         viewModelScope.launch {
-            _uiState.value = LibraryUiState.Loading
+            // Emit cached data immediately if available
+            val cached = repository.getCachedMovies()
+            if (cached.isNotEmpty()) {
+                _uiState.value = LibraryUiState.Success(cached)
+            } else {
+                _uiState.value = LibraryUiState.Loading
+            }
+            
+            // Fetch fresh data
             val movies = repository.getLibraryMovies()
             if (movies.isEmpty()) {
-                _uiState.value = LibraryUiState.Error("No videos found in library.")
+                if (cached.isEmpty()) {
+                    _uiState.value = LibraryUiState.Error("No videos found in library.")
+                }
+                // If we have cache but fetch failed/returned empty, we might want to keep showing cache 
+                // or show error. For now, if fetch returns empty, let's assume it's empty.
+                // However, if it was a network error (which returns emptyList in repo catch block),
+                // we might want to distinguish. 
+                // Given the repo returns emptyList on error, we can't distinguish easily without changing repo.
+                // But showing "No videos" is better than crashing. 
+                // If we have cache, maybe we should stick with it? 
+                // Let's only show Error if we don't have cache.
             } else {
                 _uiState.value = LibraryUiState.Success(movies)
             }

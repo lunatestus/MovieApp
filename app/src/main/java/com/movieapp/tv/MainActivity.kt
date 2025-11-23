@@ -136,6 +136,12 @@ class MainActivity : FragmentActivity() {
         if (state.upcoming.isNotEmpty()) {
             addMovieRow(adapter, 3, "Upcoming", state.upcoming)
         }
+        if (state.popularTv.isNotEmpty()) {
+            addMovieRow(adapter, 4, "Popular TV Shows", state.popularTv)
+        }
+        if (state.topRatedTv.isNotEmpty()) {
+            addMovieRow(adapter, 5, "Top Rated TV Shows", state.topRatedTv)
+        }
     }
 
     private fun addMovieRow(

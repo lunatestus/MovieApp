@@ -35,4 +35,16 @@ interface TmdbApi {
         @Query("api_key") apiKey: String,
         @Query("page") page: Int = 1
     ): MovieResponse
+
+    @GET("tv/popular")
+    suspend fun getPopularTV(
+        @Query("api_key") apiKey: String,
+        @Query("page") page: Int = 1
+    ): MovieResponse
+
+    @GET("tv/top_rated")
+    suspend fun getTopRatedTV(
+        @Query("api_key") apiKey: String,
+        @Query("page") page: Int = 1
+    ): MovieResponse
 }

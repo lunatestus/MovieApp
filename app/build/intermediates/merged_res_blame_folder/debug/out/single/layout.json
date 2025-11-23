@@ -24,12 +24,8 @@
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/navbar_layout.xml"
     },
     {
-        "merged": "com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_main.xml",
-        "source": "com.movieapp.tv.app-main-42:/layout/activity_main.xml"
-    },
-    {
-        "merged": "com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_library.xml",
-        "source": "com.movieapp.tv.app-main-42:/layout/activity_library.xml"
+        "merged": "com.movieapp.tv.app-mergeDebugResources-39:/layout/item_skeleton.xml",
+        "source": "com.movieapp.tv.app-main-42:/layout/item_skeleton.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_main.xml",

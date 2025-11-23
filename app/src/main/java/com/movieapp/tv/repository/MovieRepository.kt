@@ -57,4 +57,26 @@ class MovieRepository {
             emptyList()
         }
     }
+
+    suspend fun getPopularTV(): List<Movie> = withContext(Dispatchers.IO) {
+        return@withContext try {
+            val response = api.getPopularTV(apiKey)
+            Log.d(TAG, "Fetched ${response.results.size} popular tv shows")
+            response.results.filter { it.posterPath != null }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error fetching popular tv shows", e)
+            emptyList()
+        }
+    }
+
+    suspend fun getTopRatedTV(): List<Movie> = withContext(Dispatchers.IO) {
+        return@withContext try {
+            val response = api.getTopRatedTV(apiKey)
+            Log.d(TAG, "Fetched ${response.results.size} top rated tv shows")
+            response.results.filter { it.posterPath != null }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error fetching top rated tv shows", e)
+            emptyList()
+        }
+    }
 }

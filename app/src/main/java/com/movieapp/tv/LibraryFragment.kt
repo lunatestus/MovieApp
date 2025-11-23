@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import com.movieapp.tv.model.Movie
 import com.movieapp.tv.presenter.LibraryListRowPresenter
 import com.movieapp.tv.presenter.MovieCardPresenter
+import com.movieapp.tv.presenter.SkeletonPresenter
 import com.movieapp.tv.viewmodel.LibraryUiState
 import com.movieapp.tv.viewmodel.LibraryViewModel
 import kotlinx.coroutines.launch
@@ -18,6 +19,9 @@ class LibraryFragment : RowsSupportFragment() {
 
     private lateinit var viewModel: LibraryViewModel
     private lateinit var rowsAdapter: ArrayObjectAdapter
+    
+    // Simple placeholder object for skeleton items
+    private class SkeletonItem
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,24 +74,39 @@ class LibraryFragment : RowsSupportFragment() {
             viewModel.uiState.collect { state ->
                 when (state) {
                     is LibraryUiState.Loading -> {
-                        // Show loading if needed
+                        showSkeleton()
                     }
                     is LibraryUiState.Success -> {
                         updateAdapter(state.movies)
                     }
                     is LibraryUiState.Error -> {
-                        // Handle error
+                        // Handle error - maybe clear or show error message
+                        rowsAdapter.clear() 
                     }
                 }
             }
         }
     }
 
+    private fun showSkeleton() {
+        rowsAdapter.clear()
+        
+        // Create 3 rows of skeleton items
+        repeat(3) { index ->
+            val skeletonAdapter = ArrayObjectAdapter(SkeletonPresenter())
+            repeat(8) { // 8 items per row
+                skeletonAdapter.add(SkeletonItem())
+            }
+            val header = HeaderItem(index.toLong(), "")
+            rowsAdapter.add(ListRow(header, skeletonAdapter))
+        }
+    }
+
     private fun updateAdapter(movies: List<Movie>) {
         rowsAdapter.clear()
         
-        // Chunk movies into rows of 6 to replicate homepage feel but with multiple rows
-        val chunkSize = 6
+        // Chunk movies into rows of 8 to replicate homepage feel but with multiple rows
+        val chunkSize = 8
         val chunks = movies.chunked(chunkSize)
         
         chunks.forEachIndexed { index, movieChunk ->
