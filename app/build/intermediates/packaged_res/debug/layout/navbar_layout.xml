@@ -92,16 +92,28 @@
         android:focusable="true"
         android:clickable="true"
         android:background="@drawable/navbar_item_selector"
-        android:padding="@dimen/navbar_utility_padding"
-        android:layout_marginEnd="@dimen/navbar_utility_spacing">
+        android:paddingStart="@dimen/navbar_item_padding_horizontal"
+        android:paddingEnd="@dimen/navbar_item_padding_horizontal"
+        android:paddingTop="@dimen/navbar_item_padding_vertical"
+        android:paddingBottom="@dimen/navbar_item_padding_vertical"
+        android:layout_marginEnd="@dimen/navbar_item_spacing">
 
         <ImageView
             android:id="@+id/nav_search_icon"
-            android:layout_width="@dimen/navbar_icon_size_large"
-            android:layout_height="@dimen/navbar_icon_size_large"
+            android:layout_width="@dimen/navbar_icon_size"
+            android:layout_height="@dimen/navbar_icon_size"
             android:src="@drawable/ic_search"
             android:contentDescription="Search"
+            android:layout_marginEnd="@dimen/navbar_item_icon_margin"
             android:tint="@color/navbar_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEARCH"
+            android:textColor="@color/navbar_text"
+            android:textSize="@dimen/navbar_text_size"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <!-- Profile -->
@@ -114,16 +126,28 @@
         android:focusable="true"
         android:clickable="true"
         android:background="@drawable/navbar_item_selector"
-        android:padding="@dimen/navbar_utility_padding"
-        android:layout_marginEnd="@dimen/navbar_utility_spacing">
+        android:paddingStart="@dimen/navbar_item_padding_horizontal"
+        android:paddingEnd="@dimen/navbar_item_padding_horizontal"
+        android:paddingTop="@dimen/navbar_item_padding_vertical"
+        android:paddingBottom="@dimen/navbar_item_padding_vertical"
+        android:layout_marginEnd="@dimen/navbar_item_spacing">
 
         <ImageView
             android:id="@+id/nav_profile_icon"
-            android:layout_width="@dimen/navbar_icon_size_large"
-            android:layout_height="@dimen/navbar_icon_size_large"
+            android:layout_width="@dimen/navbar_icon_size"
+            android:layout_height="@dimen/navbar_icon_size"
             android:src="@drawable/ic_profile"
             android:contentDescription="Profile"
+            android:layout_marginEnd="@dimen/navbar_item_icon_margin"
             android:tint="@color/navbar_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PROFILE"
+            android:textColor="@color/navbar_text"
+            android:textSize="@dimen/navbar_text_size"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <!-- Settings -->
@@ -136,15 +160,27 @@
         android:focusable="true"
         android:clickable="true"
         android:background="@drawable/navbar_item_selector"
-        android:padding="@dimen/navbar_utility_padding">
+        android:paddingStart="@dimen/navbar_item_padding_horizontal"
+        android:paddingEnd="@dimen/navbar_item_padding_horizontal"
+        android:paddingTop="@dimen/navbar_item_padding_vertical"
+        android:paddingBottom="@dimen/navbar_item_padding_vertical">
 
         <ImageView
             android:id="@+id/nav_settings_icon"
-            android:layout_width="@dimen/navbar_icon_size_large"
-            android:layout_height="@dimen/navbar_icon_size_large"
+            android:layout_width="@dimen/navbar_icon_size"
+            android:layout_height="@dimen/navbar_icon_size"
             android:src="@drawable/ic_settings"
             android:contentDescription="Settings"
+            android:layout_marginEnd="@dimen/navbar_item_icon_margin"
             android:tint="@color/navbar_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SETTINGS"
+            android:textColor="@color/navbar_text"
+            android:textSize="@dimen/navbar_text_size"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>

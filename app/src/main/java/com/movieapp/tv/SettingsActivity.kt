@@ -31,7 +31,7 @@ class SettingsActivity : FragmentActivity() {
 
         // Setup navbar navigation
         setupNavbar()
-        
+
         // Set focus to Settings navbar item
         findViewById<LinearLayout>(R.id.nav_settings).requestFocus()
     }
@@ -49,7 +49,9 @@ class SettingsActivity : FragmentActivity() {
 
     private fun setupNavbar() {
         findViewById<LinearLayout>(R.id.nav_home).setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
             finish()
         }
 

@@ -1,35 +1,127 @@
 [
     {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_button_focused_bg_rect.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/button_focused_bg_rect.xml"
+    },
+    {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_ic_profile.xml.flat",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/ic_profile.xml"
-    },
-    {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_space_mono.xml.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/space_mono.xml"
-    },
-    {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/mipmap-mdpi/ic_launcher.png"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_gradient_overlay.xml.flat",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/gradient_overlay.xml"
     },
     {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_navbar_item_selector.xml.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/navbar_item_selector.xml"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_space_mono.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/space_mono.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_dm_sans_regular.ttf.flat",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/dm_sans_regular.ttf"
     },
     {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_navbar_item_selector.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/navbar_item_selector.xml"
+    },
+    {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_backdrop_placeholder.xml.flat",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/backdrop_placeholder.xml"
     },
     {
+        "merged": "com.movieapp.tv.app-merged_res-40:/layout_activity_library.xml.flat",
+        "source": "com.movieapp.tv.app-main-42:/layout/activity_library.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_player_gradient_top_bg.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/player_gradient_top_bg.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_play_button_focused_bg.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/play_button_focused_bg.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_ic_home.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_dm_sans_family.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/dm_sans_family.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_skeleton_background.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/skeleton_background.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_ic_subtitle.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/ic_subtitle.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_ic_audio_track.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/ic_audio_track.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_movie_placeholder.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/movie_placeholder.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_activity_folder.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_folder.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_tab_selected_bg.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/tab_selected_bg.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_space_mono_bold.ttf.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/space_mono_bold.ttf"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_activity_settings.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_ic_library.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/ic_library.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_activity_player.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_player.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_dm_sans.ttf.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/dm_sans.ttf"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_spinner_ring.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/spinner_ring.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_space_mono_italic.ttf.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/space_mono_italic.ttf"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_tv_banner.png.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/tv_banner.png"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_layout_hero_section.xml.flat",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/layout_hero_section.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_item_skeleton.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/item_skeleton.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_ic_launcher_foreground.xml.flat",
@@ -56,12 +148,12 @@
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/hero_gradient.xml"
     },
     {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_movie_header.xml.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/movie_header.xml"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_exo_player_control_view.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/exo_player_control_view.xml"
     },
     {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_ic_home.xml.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/ic_home.xml"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_movie_header.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/movie_header.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_activity_main.xml.flat",
@@ -72,12 +164,16 @@
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/space_mono_regular.ttf"
     },
     {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_dm_sans_family.xml.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/dm_sans_family.xml"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_capsule_button_bg.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/capsule_button_bg.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_player_gradient_bg.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/player_gradient_bg.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/mipmap-hdpi_ic_launcher.png.flat",
@@ -100,59 +196,43 @@
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_coming_soon.xml"
     },
     {
-        "merged": "com.movieapp.tv.app-merged_res-40:/drawable_skeleton_background.xml.flat",
-        "source": "com.movieapp.tv.app-main-42:/drawable/skeleton_background.xml"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_activity_movies.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_movies.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_player_loading_spinner.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/player_loading_spinner.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_ic_series.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/ic_series.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_capsule_button_focused_bg.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/capsule_button_focused_bg.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.movieapp.tv.app-merged_res-40:/layout_item_skeleton.xml.flat",
-        "source": "com.movieapp.tv.app-main-42:/layout/item_skeleton.xml"
-    },
-    {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_movie_placeholder.xml.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/movie_placeholder.xml"
-    },
-    {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_header_gradient.xml.flat",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/header_gradient.xml"
     },
     {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_space_mono_bold.ttf.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/space_mono_bold.ttf"
-    },
-    {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_activity_settings.xml.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_settings.xml"
-    },
-    {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_ic_library.xml.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/ic_library.xml"
-    },
-    {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_activity_player.xml.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_player.xml"
-    },
-    {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_ic_back.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/ic_back.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_button_background.xml.flat",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/button_background.xml"
     },
     {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_dm_sans.ttf.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/dm_sans.ttf"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/drawable_play_button_bg.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/drawable/play_button_bg.xml"
     },
     {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/mipmap-xhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/font_space_mono_italic.ttf.flat",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/font/space_mono_italic.ttf"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-merged_res-40:/layout_activity_series.xml.flat",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_series.xml"
     }
 ]

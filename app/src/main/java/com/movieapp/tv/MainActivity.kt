@@ -13,11 +13,13 @@ import androidx.leanback.widget.*
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.movieapp.tv.model.Movie
+import com.movieapp.tv.repository.LibraryRepository
 import com.movieapp.tv.presenter.CustomListRowPresenter
 import com.movieapp.tv.presenter.MovieCardPresenter
 import com.movieapp.tv.viewmodel.MainUiState
 import com.movieapp.tv.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.Dispatchers
 
 import android.widget.ImageView
 import android.widget.TextView
@@ -29,7 +31,7 @@ class MainActivity : FragmentActivity() {
     private lateinit var browseSupportFragment: CustomBrowseFragment
     private lateinit var viewModel: MainViewModel
     private var rowsAdapter: ArrayObjectAdapter? = null
-    
+
     // Hero Section Views
     private lateinit var heroTitle: TextView
     private lateinit var heroDescription: TextView
@@ -51,7 +53,7 @@ class MainActivity : FragmentActivity() {
 
         browseSupportFragment = supportFragmentManager
             .findFragmentById(R.id.browse_fragment) as CustomBrowseFragment
-            
+
         // Initialize Hero Views
         heroTitle = findViewById(R.id.hero_title)
         heroDescription = findViewById(R.id.hero_description)
@@ -60,20 +62,35 @@ class MainActivity : FragmentActivity() {
         heroLanguage = findViewById(R.id.hero_language)
         heroBackground = findViewById(R.id.hero_background)
         heroMetadataContainer = findViewById(R.id.hero_metadata_container)
-        
+
         setupUI()
         setupNavbar()
         observeViewModel()
 
         // Focus on Home button initially
         findViewById<LinearLayout>(R.id.nav_home).requestFocus()
+
+        // Preload Library content
+        preloadLibrary()
+    }
+
+    private fun preloadLibrary() {
+        lifecycleScope.launch(Dispatchers.IO) {
+            try {
+                Log.d(TAG, "Starting library preload...")
+                LibraryRepository(applicationContext).getLibraryMovies()
+                Log.d(TAG, "Library preload completed")
+            } catch (e: Exception) {
+                Log.e(TAG, "Library preload failed", e)
+            }
+        }
     }
 
     private fun setupUI() {
         browseSupportFragment.apply {
             // Configure window alignment for perfect row scrolling
             setSelectedPosition(0, true)
-            
+
             // Listen for item selection to update Hero Section
             onItemViewSelectedListener = OnItemViewSelectedListener { _, item, _, _ ->
                 if (item is Movie) {
@@ -81,7 +98,7 @@ class MainActivity : FragmentActivity() {
                 }
             }
         }
-        
+
         // Initialize adapter
         rowsAdapter = ArrayObjectAdapter(CustomListRowPresenter())
         browseSupportFragment.adapter = rowsAdapter
@@ -94,7 +111,7 @@ class MainActivity : FragmentActivity() {
         heroRating.text = movie.getFormattedRating()
         heroYear.text = movie.getFormattedYear()
         heroLanguage.text = movie.getFormattedLanguage()
-        
+
         // Load background image
         Glide.with(this)
             .load(movie.getBackdropUrl())
@@ -162,20 +179,28 @@ class MainActivity : FragmentActivity() {
     }
 
     private fun setupNavbar() {
-        val navItems = mapOf(
-            R.id.nav_home to null, // Already on home
-            R.id.nav_library to LibraryActivity::class.java,
-            R.id.nav_search to SearchActivity::class.java,
-            R.id.nav_profile to ProfileActivity::class.java,
-            R.id.nav_settings to SettingsActivity::class.java
-        )
+        findViewById<LinearLayout>(R.id.nav_home).setOnClickListener {
+            // Already on home - do nothing
+        }
 
-        navItems.forEach { (id, activityClass) ->
-            findViewById<LinearLayout>(id).setOnClickListener {
-                activityClass?.let {
-                    startActivity(Intent(this, it))
-                }
-            }
+        findViewById<LinearLayout>(R.id.nav_library).setOnClickListener {
+            startActivity(Intent(this, LibraryActivity::class.java))
+            finish()
+        }
+
+        findViewById<LinearLayout>(R.id.nav_search).setOnClickListener {
+            startActivity(Intent(this, SearchActivity::class.java))
+            finish()
+        }
+
+        findViewById<LinearLayout>(R.id.nav_profile).setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+            finish()
+        }
+
+        findViewById<LinearLayout>(R.id.nav_settings).setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
+            finish()
         }
     }
 

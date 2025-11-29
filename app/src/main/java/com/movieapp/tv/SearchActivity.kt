@@ -17,14 +17,16 @@ class SearchActivity : FragmentActivity() {
 
         // Setup navbar navigation
         setupNavbar()
-        
+
         // Set focus to Search navbar item
         findViewById<LinearLayout>(R.id.nav_search).requestFocus()
     }
 
     private fun setupNavbar() {
         findViewById<LinearLayout>(R.id.nav_home).setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
             finish()
         }
 

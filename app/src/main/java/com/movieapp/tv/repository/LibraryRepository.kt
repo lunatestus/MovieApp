@@ -66,4 +66,91 @@ class LibraryRepository(private val context: Context) {
             emptyList()
         }
     }
+
+    suspend fun getLibrarySeries(): List<Movie> = withContext(Dispatchers.IO) {
+        return@withContext try {
+            var baseUrl = PreferencesManager.getLibraryUrl(context).trimEnd('/')
+            
+            // Try to get dynamic URL from Discovery service
+            try {
+                val discoveryResponse = RetrofitClient.discoveryApi.getAppUrl()
+                if (discoveryResponse.status == "ready" && discoveryResponse.url.isNotEmpty()) {
+                    baseUrl = discoveryResponse.url.trimEnd('/')
+                    Log.d(TAG, "Discovered new library URL: $baseUrl")
+                    PreferencesManager.saveLibraryUrl(context, baseUrl)
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to fetch discovery URL, falling back to saved URL: $baseUrl", e)
+            }
+
+            val libraryApi = RetrofitClient.createLibraryApi(baseUrl)
+            val files = libraryApi.getLibrarySeries()
+            Log.d(TAG, "Fetched ${files.size} series from library")
+
+            val series = mutableListOf<Movie>()
+            files.forEach { file ->
+                val movie = Movie(
+                    id = 0,
+                    _title = file.name,
+                    _name = null,
+                    overview = "",
+                    posterPath = null,
+                    backdropPath = null,
+                    voteAverage = 0.0,
+                    _releaseDate = null,
+                    _firstAirDate = null,
+                    originalLanguage = null,
+                    videoUrl = "$baseUrl${file.url}"
+                )
+                series.add(movie)
+            }
+            series
+        } catch (e: Exception) {
+            Log.e(TAG, "Error fetching library series", e)
+            emptyList()
+        }
+    }
+
+    suspend fun getFolderContents(folderPath: String): List<Movie> = withContext(Dispatchers.IO) {
+        return@withContext try {
+            var baseUrl = PreferencesManager.getLibraryUrl(context).trimEnd('/')
+            
+            // Try to get dynamic URL from Discovery service
+            try {
+                val discoveryResponse = RetrofitClient.discoveryApi.getAppUrl()
+                if (discoveryResponse.status == "ready" && discoveryResponse.url.isNotEmpty()) {
+                    baseUrl = discoveryResponse.url.trimEnd('/')
+                    PreferencesManager.saveLibraryUrl(context, baseUrl)
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to fetch discovery URL, falling back to saved URL: $baseUrl", e)
+            }
+
+            val libraryApi = RetrofitClient.createLibraryApi(baseUrl)
+            val files = libraryApi.getFolderContents()
+            Log.d(TAG, "Fetched ${files.size} items from folder")
+
+            val items = mutableListOf<Movie>()
+            files.forEach { file ->
+                val movie = Movie(
+                    id = 0,
+                    _title = file.name,
+                    _name = null,
+                    overview = "",
+                    posterPath = null,
+                    backdropPath = null,
+                    voteAverage = 0.0,
+                    _releaseDate = null,
+                    _firstAirDate = null,
+                    originalLanguage = null,
+                    videoUrl = "$baseUrl${file.url}"
+                )
+                items.add(movie)
+            }
+            items
+        } catch (e: Exception) {
+            Log.e(TAG, "Error fetching folder contents", e)
+            emptyList()
+        }
+    }
 }

@@ -56,4 +56,17 @@ class LibraryViewModel(application: Application) : AndroidViewModel(application)
             }
         }
     }
+
+    fun loadSeries() {
+        viewModelScope.launch {
+            _uiState.value = LibraryUiState.Loading
+            
+            val series = repository.getLibrarySeries()
+            if (series.isEmpty()) {
+                _uiState.value = LibraryUiState.Error("No series found in library.")
+            } else {
+                _uiState.value = LibraryUiState.Success(series)
+            }
+        }
+    }
 }

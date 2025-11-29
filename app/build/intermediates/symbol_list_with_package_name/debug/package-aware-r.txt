@@ -2382,6 +2382,8 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color navbar_background
 color navbar_text
+color netflix_dark
+color netflix_red
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -3497,6 +3499,7 @@ dimen row_header_margin_bottom
 dimen row_header_margin_top
 dimen row_margin_bottom
 dimen row_margin_top
+dimen scrubber_enabled_size
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -3596,6 +3599,9 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_background
+drawable button_focused_bg_rect
+drawable capsule_button_bg
+drawable capsule_button_focused_bg
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3684,6 +3690,7 @@ drawable gradient_overlay
 drawable header_gradient
 drawable hero_gradient
 drawable ic_arrow_back_black_24
+drawable ic_audio_track
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -3707,6 +3714,7 @@ drawable ic_profile
 drawable ic_search
 drawable ic_search_black_24
 drawable ic_settings
+drawable ic_subtitle
 drawable lb_action_bg
 drawable lb_action_bg_focused
 drawable lb_background
@@ -3832,10 +3840,17 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable play_button_bg
+drawable play_button_focused_bg
+drawable player_gradient_bg
+drawable player_gradient_top_bg
+drawable player_loading_spinner
 drawable skeleton_background
+drawable spinner_ring
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable tv_banner
 font dm_sans
 font dm_sans_family
 font dm_sans_regular
@@ -3968,6 +3983,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottom_controls
 id bottom_spacer
 id bounce
 id bounceBoth
@@ -3983,7 +3999,9 @@ id browse_headers
 id browse_headers_dock
 id browse_headers_root
 id browse_title_group
+id btn_audio_track
 id btn_save_settings
+id btn_subtitle
 id button
 id buttonPanel
 id button_start
@@ -4029,6 +4047,7 @@ id controls_card
 id controls_card_right_panel
 id controls_container
 id controls_dock
+id controls_root
 id coordinator
 id cos
 id counterclockwise
@@ -4177,6 +4196,7 @@ id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
 id gone
+id gradient_overlay
 id graph
 id graph_wrap
 id grid_frame
@@ -4295,6 +4315,7 @@ id line3
 id linear
 id listMode
 id list_item
+id loading_spinner
 id logo
 id m3_side_sheet
 id main
@@ -4449,6 +4470,7 @@ id peekHeight
 id percent
 id picker
 id pin
+id play_pause_container
 id playback_controls_dock
 id playback_fragment_background
 id playback_fragment_root
@@ -4586,6 +4608,7 @@ id title_text
 id toggle
 id top
 id topPanel
+id top_gradient_overlay
 id total_time
 id touch_outside
 id transitionPosition
@@ -4607,6 +4630,7 @@ id vertical_only
 id video_decoder_gl_surface_view
 id video_surface
 id video_surface_container
+id video_title
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -5057,6 +5081,7 @@ string exo_track_surround
 string exo_track_surround_5_point_1
 string exo_track_surround_7_point_1
 string exo_track_unknown
+string exo_track_unknown_name
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -5917,6 +5942,7 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
+style Theme_Player
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

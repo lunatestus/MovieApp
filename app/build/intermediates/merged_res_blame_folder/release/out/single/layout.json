@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/activity_details.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/activity_details.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/activity_player.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/activity_player.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/exo_player_control_view.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/exo_player_control_view.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/navbar_layout.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/navbar_layout.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/movie_header.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/movie_header.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/activity_library.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/activity_library.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/layout_hero_section.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/layout_hero_section.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/activity_coming_soon.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/activity_coming_soon.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/activity_main.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/activity_settings.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeReleaseResources-39:/layout/item_skeleton.xml",
+        "source": "com.movieapp.tv.app-main-41:/layout/item_skeleton.xml"
+    }
+]

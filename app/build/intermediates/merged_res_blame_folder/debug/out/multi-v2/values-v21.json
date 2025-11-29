@@ -42,6 +42,25 @@
                     }
                 },
                 {
+                    "source": "/home/zeus/.gradle/caches/transforms-3/9fc39f95e7f3fffbe6bad21d8933029e/transformed/jetified-media3-ui-1.3.1/res/values-v21/values-v21.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,114",
+                        "endLines": "2,7",
+                        "endColumns": "58,10",
+                        "endOffsets": "109,396"
+                    },
+                    "to": {
+                        "startLines": "3,293",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,21979",
+                        "endLines": "3,297",
+                        "endColumns": "58,10",
+                        "endOffsets": "227,22261"
+                    }
+                },
+                {
                     "source": "/home/zeus/.gradle/caches/transforms-3/c1edc948bdf0c8c8cdd2452e5dbc40f1/transformed/leanback-1.0.0/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,7,13,17,20,25,29,52,55,59",
@@ -80,7 +99,7 @@
                     }
                 },
                 {
-                    "source": "/home/zeus/.gradle/caches/transforms-3/0b590628e62f0fed8866173cd27974e9/transformed/media-1.6.0/res/values-v21/values-v21.xml",
+                    "source": "/home/zeus/.gradle/caches/transforms-3/22544adb3a08cb30fd38a6057a34ac58/transformed/media-1.7.0/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -96,25 +115,6 @@
                         "endLines": "357,360,364,368",
                         "endColumns": "12,12,12,12",
                         "endOffsets": "26309,26472,26766,27061"
-                    }
-                },
-                {
-                    "source": "/home/zeus/.gradle/caches/transforms-3/b87d3ed08cf5d240dc6f73cd22b1b002/transformed/jetified-media3-ui-1.2.0/res/values-v21/values-v21.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,114",
-                        "endLines": "2,7",
-                        "endColumns": "58,10",
-                        "endOffsets": "109,396"
-                    },
-                    "to": {
-                        "startLines": "3,293",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,21979",
-                        "endLines": "3,297",
-                        "endColumns": "58,10",
-                        "endOffsets": "227,22261"
                     }
                 }
             ]

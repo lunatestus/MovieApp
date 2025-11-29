@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/controls_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top gradient overlay -->
+    <View
+        android:id="@+id/top_gradient_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="top"
+        android:background="@drawable/player_gradient_top_bg" />
+
+    <!-- Movie title in top left -->
+    <TextView
+        android:id="@+id/video_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/space_mono"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- Bottom gradient overlay -->
+    <View
+        android:id="@+id/gradient_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/player_gradient_bg" />
+
+    <!-- Bottom controls container -->
+    <LinearLayout
+        android:id="@+id/bottom_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="48dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Seekbar row with timestamps -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Current position (left) -->
+            <TextView
+                android:id="@id/exo_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/space_mono"
+                android:includeFontPadding="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+            <!-- Progress bar -->
+            <androidx.media3.ui.DefaultTimeBar
+                android:id="@id/exo_progress"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                app:bar_height="4dp"
+                app:played_color="#FFFFFF"
+                app:scrubber_color="#FFFFFF"
+                app:buffered_color="#80FFFFFF"
+                app:unplayed_color="#40FFFFFF"
+                app:scrubber_enabled_size="12dp"
+                app:scrubber_disabled_size="0dp"
+                app:scrubber_dragged_size="14dp"
+                app:touch_target_height="32dp" />
+
+            <!-- Duration (right) -->
+            <TextView
+                android:id="@id/exo_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/space_mono"
+                android:includeFontPadding="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Bottom row: Play/Pause left, Audio/Subtitle right -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Play/Pause button (left) - circular -->
+            <FrameLayout
+                android:id="@+id/play_pause_container"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/play_button_bg">
+
+                <ImageButton
+                    android:id="@id/exo_play_pause"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Play/Pause"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/exo_icon_play" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Audio track capsule button -->
+            <LinearLayout
+                android:id="@+id/btn_audio_track"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/capsule_button_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:focusable="false"
+                android:clickable="false">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_audio_track"
+                    android:tint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/space_mono"
+                    android:text="Audio"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <!-- Subtitle capsule button -->
+            <LinearLayout
+                android:id="@+id/btn_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/capsule_button_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:focusable="false"
+                android:clickable="false">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_subtitle"
+                    android:tint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/space_mono"
+                    android:text="Subtitles"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

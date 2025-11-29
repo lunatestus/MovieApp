@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
     private const val BASE_URL = "https://api.themoviedb.org/3/"
-    private const val DISCOVERY_URL = "https://yashkushwahayt--modal-video-uploader-get-app-url-dev.modal.run/"
+    private const val DISCOVERY_URL = "https://yashkushwahayt--modal-video-uploader-get-app-url.modal.run/"
     private const val CONNECT_TIMEOUT = 30L
     private const val READ_TIMEOUT = 30L
     private const val WRITE_TIMEOUT = 30L
