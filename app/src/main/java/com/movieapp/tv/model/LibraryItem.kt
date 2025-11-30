@@ -10,8 +10,14 @@ data class LibraryItem(
     val size: Long,
     
     @SerializedName("tmdb_id")
-    val tmdbId: String,
+    val tmdbId: String?,
     
     @SerializedName("url")
-    val url: String
+    val url: String,
+
+    @SerializedName("type")
+    val type: String?,
+
+    @SerializedName("is_folder")
+    val isFolder: Boolean = false
 )

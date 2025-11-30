@@ -30,8 +30,13 @@ class SearchActivity : FragmentActivity() {
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.nav_library).setOnClickListener {
+        findViewById<LinearLayout>(R.id.nav_movies).setOnClickListener {
             startActivity(Intent(this, LibraryActivity::class.java))
+            finish()
+        }
+
+        findViewById<LinearLayout>(R.id.nav_series).setOnClickListener {
+            startActivity(Intent(this, SeriesActivity::class.java))
             finish()
         }
 
@@ -39,10 +44,7 @@ class SearchActivity : FragmentActivity() {
             // Already on Search page
         }
 
-        findViewById<LinearLayout>(R.id.nav_profile).setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
-            finish()
-        }
+
 
         findViewById<LinearLayout>(R.id.nav_settings).setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))

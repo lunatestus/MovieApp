@@ -4,28 +4,36 @@
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_details.xml"
     },
     {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/movie_header.xml",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/movie_header.xml"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/item_file.xml",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/item_file.xml"
     },
     {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_player.xml",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_player.xml"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/movie_header.xml",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/movie_header.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/exo_player_control_view.xml",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/exo_player_control_view.xml"
     },
     {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_player.xml",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_player.xml"
+    },
+    {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/navbar_layout.xml",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/navbar_layout.xml"
     },
     {
-        "merged": "com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_library.xml",
-        "source": "com.movieapp.tv.app-main-42:/layout/activity_library.xml"
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/item_episode_skeleton.xml",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/item_episode_skeleton.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_main.xml",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/item_episode.xml",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/item_episode.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_library.xml",
@@ -40,16 +48,12 @@
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_series.xml"
     },
     {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_movies.xml",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_movies.xml"
-    },
-    {
-        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_folder.xml",
-        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_folder.xml"
-    },
-    {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_coming_soon.xml",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_coming_soon.xml"
+    },
+    {
+        "merged": "com.movieapp.tv.app-mergeDebugResources-39:/layout/item_episode.xml",
+        "source": "com.movieapp.tv.app-main-42:/layout/item_episode.xml"
     },
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/item_skeleton.xml",
@@ -58,5 +62,9 @@
     {
         "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_settings.xml",
         "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-mergeDebugResources-39:/layout/activity_series_details.xml",
+        "source": "/home/zeus/.gradle/daemon/8.0/com.movieapp.tv.app-main-42:/layout/activity_series_details.xml"
     }
 ]

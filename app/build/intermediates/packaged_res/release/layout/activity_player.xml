@@ -17,14 +17,14 @@
         app:resize_mode="fit"
         app:controller_layout_id="@layout/exo_player_control_view" />
 
-    <!-- Custom Buffering Loader -->
+    <!-- Custom Loading Spinner -->
     <ProgressBar
-        android:id="@+id/loading_indicator"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:id="@+id/loading_spinner"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_gravity="center"
-        android:indeterminateDrawable="@drawable/custom_loader_ring"
-        android:indeterminateDuration="700"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/player_loading_spinner"
         android:visibility="gone" />
 
 </FrameLayout>

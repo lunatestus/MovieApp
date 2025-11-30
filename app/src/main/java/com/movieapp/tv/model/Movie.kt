@@ -37,7 +37,9 @@ data class Movie(
     val genreIds: List<Int> = emptyList(),
 
     // Not part of TMDB API, used for Library items
-    var videoUrl: String? = null
+    var videoUrl: String? = null,
+    var isFolder: Boolean = false,
+    var type: String? = null
 ) {
     val title: String
         get() = _title ?: _name ?: "Unknown Title"

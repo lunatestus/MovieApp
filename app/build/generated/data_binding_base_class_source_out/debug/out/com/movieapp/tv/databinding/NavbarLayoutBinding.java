@@ -26,22 +26,22 @@ public final class NavbarLayoutBinding implements ViewBinding {
   public final ImageView navHomeIcon;
 
   @NonNull
-  public final LinearLayout navLibrary;
+  public final LinearLayout navMovies;
 
   @NonNull
-  public final ImageView navLibraryIcon;
-
-  @NonNull
-  public final LinearLayout navProfile;
-
-  @NonNull
-  public final ImageView navProfileIcon;
+  public final ImageView navMoviesIcon;
 
   @NonNull
   public final LinearLayout navSearch;
 
   @NonNull
   public final ImageView navSearchIcon;
+
+  @NonNull
+  public final LinearLayout navSeries;
+
+  @NonNull
+  public final ImageView navSeriesIcon;
 
   @NonNull
   public final LinearLayout navSettings;
@@ -53,20 +53,20 @@ public final class NavbarLayoutBinding implements ViewBinding {
   public final LinearLayout navbar;
 
   private NavbarLayoutBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout navHome,
-      @NonNull ImageView navHomeIcon, @NonNull LinearLayout navLibrary,
-      @NonNull ImageView navLibraryIcon, @NonNull LinearLayout navProfile,
-      @NonNull ImageView navProfileIcon, @NonNull LinearLayout navSearch,
-      @NonNull ImageView navSearchIcon, @NonNull LinearLayout navSettings,
+      @NonNull ImageView navHomeIcon, @NonNull LinearLayout navMovies,
+      @NonNull ImageView navMoviesIcon, @NonNull LinearLayout navSearch,
+      @NonNull ImageView navSearchIcon, @NonNull LinearLayout navSeries,
+      @NonNull ImageView navSeriesIcon, @NonNull LinearLayout navSettings,
       @NonNull ImageView navSettingsIcon, @NonNull LinearLayout navbar) {
     this.rootView = rootView;
     this.navHome = navHome;
     this.navHomeIcon = navHomeIcon;
-    this.navLibrary = navLibrary;
-    this.navLibraryIcon = navLibraryIcon;
-    this.navProfile = navProfile;
-    this.navProfileIcon = navProfileIcon;
+    this.navMovies = navMovies;
+    this.navMoviesIcon = navMoviesIcon;
     this.navSearch = navSearch;
     this.navSearchIcon = navSearchIcon;
+    this.navSeries = navSeries;
+    this.navSeriesIcon = navSeriesIcon;
     this.navSettings = navSettings;
     this.navSettingsIcon = navSettingsIcon;
     this.navbar = navbar;
@@ -111,27 +111,15 @@ public final class NavbarLayoutBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.nav_library;
-      LinearLayout navLibrary = ViewBindings.findChildViewById(rootView, id);
-      if (navLibrary == null) {
+      id = R.id.nav_movies;
+      LinearLayout navMovies = ViewBindings.findChildViewById(rootView, id);
+      if (navMovies == null) {
         break missingId;
       }
 
-      id = R.id.nav_library_icon;
-      ImageView navLibraryIcon = ViewBindings.findChildViewById(rootView, id);
-      if (navLibraryIcon == null) {
-        break missingId;
-      }
-
-      id = R.id.nav_profile;
-      LinearLayout navProfile = ViewBindings.findChildViewById(rootView, id);
-      if (navProfile == null) {
-        break missingId;
-      }
-
-      id = R.id.nav_profile_icon;
-      ImageView navProfileIcon = ViewBindings.findChildViewById(rootView, id);
-      if (navProfileIcon == null) {
+      id = R.id.nav_movies_icon;
+      ImageView navMoviesIcon = ViewBindings.findChildViewById(rootView, id);
+      if (navMoviesIcon == null) {
         break missingId;
       }
 
@@ -144,6 +132,18 @@ public final class NavbarLayoutBinding implements ViewBinding {
       id = R.id.nav_search_icon;
       ImageView navSearchIcon = ViewBindings.findChildViewById(rootView, id);
       if (navSearchIcon == null) {
+        break missingId;
+      }
+
+      id = R.id.nav_series;
+      LinearLayout navSeries = ViewBindings.findChildViewById(rootView, id);
+      if (navSeries == null) {
+        break missingId;
+      }
+
+      id = R.id.nav_series_icon;
+      ImageView navSeriesIcon = ViewBindings.findChildViewById(rootView, id);
+      if (navSeriesIcon == null) {
         break missingId;
       }
 
@@ -161,8 +161,8 @@ public final class NavbarLayoutBinding implements ViewBinding {
 
       LinearLayout navbar = (LinearLayout) rootView;
 
-      return new NavbarLayoutBinding((LinearLayout) rootView, navHome, navHomeIcon, navLibrary,
-          navLibraryIcon, navProfile, navProfileIcon, navSearch, navSearchIcon, navSettings,
+      return new NavbarLayoutBinding((LinearLayout) rootView, navHome, navHomeIcon, navMovies,
+          navMoviesIcon, navSearch, navSearchIcon, navSeries, navSeriesIcon, navSettings,
           navSettingsIcon, navbar);
     }
     String missingId = rootView.getResources().getResourceName(id);

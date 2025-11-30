@@ -57,11 +57,15 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.movieapp.tv.ProfileActivity"
+            android:name="com.movieapp.tv.SettingsActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.movieapp.tv.SettingsActivity"
+            android:name="com.movieapp.tv.SeriesActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.movieapp.tv.SeriesDetailsActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity

@@ -183,8 +183,13 @@ class MainActivity : FragmentActivity() {
             // Already on home - do nothing
         }
 
-        findViewById<LinearLayout>(R.id.nav_library).setOnClickListener {
+        findViewById<LinearLayout>(R.id.nav_movies).setOnClickListener {
             startActivity(Intent(this, LibraryActivity::class.java))
+            finish()
+        }
+
+        findViewById<LinearLayout>(R.id.nav_series).setOnClickListener {
+            startActivity(Intent(this, SeriesActivity::class.java))
             finish()
         }
 
@@ -193,10 +198,7 @@ class MainActivity : FragmentActivity() {
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.nav_profile).setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
-            finish()
-        }
+
 
         findViewById<LinearLayout>(R.id.nav_settings).setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))

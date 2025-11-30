@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-65:12
+ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:2:1-75:12
 MERGED from [androidx.databinding:viewbinding:8.1.0] /home/zeus/.gradle/caches/transforms-3/629a4ff7eac016482d0d280321f91aab/transformed/jetified-viewbinding-8.1.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] /home/zeus/.gradle/caches/transforms-3/76947f2dda4873f4ff357d73f51effc0/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/zeus/.gradle/caches/transforms-3/6de17af1fafef4018d975c87f851457b/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
@@ -101,8 +101,8 @@ ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:11:9-49
 application
-ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:14:5-63:19
-INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:14:5-63:19
+ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:14:5-73:19
+INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:14:5-73:19
 MERGED from [com.google.android.material:material:1.11.0] /home/zeus/.gradle/caches/transforms-3/76947f2dda4873f4ff357d73f51effc0/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /home/zeus/.gradle/caches/transforms-3/76947f2dda4873f4ff357d73f51effc0/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/zeus/.gradle/caches/transforms-3/6de17af1fafef4018d975c87f851457b/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -193,18 +193,34 @@ ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:54:13-37
 	android:name
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:53:13-45
-activity#com.movieapp.tv.PlayerActivity
-ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:57:9-62:125
+activity#com.movieapp.tv.SeriesActivity
+ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:57:9-60:53
 	android:screenOrientation
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:60:13-50
 	android:exported
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:59:13-37
-	android:configChanges
-		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:62:13-122
-	android:theme
-		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:61:13-48
 	android:name
 		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:58:13-43
+activity#com.movieapp.tv.SeriesDetailsActivity
+ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:62:9-65:53
+	android:screenOrientation
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:65:13-50
+	android:exported
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:64:13-37
+	android:name
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:63:13-50
+activity#com.movieapp.tv.PlayerActivity
+ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:67:9-72:125
+	android:screenOrientation
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:70:13-50
+	android:exported
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:69:13-37
+	android:configChanges
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:72:13-122
+	android:theme
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:71:13-48
+	android:name
+		ADDED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml:68:13-43
 uses-sdk
 INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /teamspace/studios/this_studio/movieapp/app/src/main/AndroidManifest.xml

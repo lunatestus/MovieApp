@@ -45,12 +45,17 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".ProfileActivity"
+            android:name=".SettingsActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".SettingsActivity"
+            android:name=".SeriesActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".SeriesDetailsActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
 

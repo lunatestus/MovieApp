@@ -21,15 +21,15 @@ class LibraryActivity : FragmentActivity() {
         // Setup navbar navigation
         setupNavbar()
 
-        // Focus on Library button initially
-        findViewById<LinearLayout>(R.id.nav_library).requestFocus()
+        // Focus on Movies button initially
+        findViewById<LinearLayout>(R.id.nav_movies).requestFocus()
     }
 
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
         // When user presses UP on D-pad from the first row of library, move focus to navbar
         if (event.action == KeyEvent.ACTION_DOWN && event.keyCode == KeyEvent.KEYCODE_DPAD_UP) {
             if (!isNavbarFocused() && libraryFragment.handleUpKey()) {
-                findViewById<LinearLayout>(R.id.nav_library).requestFocus()
+                findViewById<LinearLayout>(R.id.nav_movies).requestFocus()
                 return true
             }
         }
@@ -54,8 +54,13 @@ class LibraryActivity : FragmentActivity() {
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.nav_library).setOnClickListener {
-            // Already on Library page
+        findViewById<LinearLayout>(R.id.nav_movies).setOnClickListener {
+            // Already on Movies page
+        }
+
+        findViewById<LinearLayout>(R.id.nav_series).setOnClickListener {
+            startActivity(Intent(this, SeriesActivity::class.java))
+            finish()
         }
 
         findViewById<LinearLayout>(R.id.nav_search).setOnClickListener {
@@ -63,10 +68,7 @@ class LibraryActivity : FragmentActivity() {
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.nav_profile).setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
-            finish()
-        }
+
 
         findViewById<LinearLayout>(R.id.nav_settings).setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
