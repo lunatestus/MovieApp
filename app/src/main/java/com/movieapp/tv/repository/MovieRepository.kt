@@ -1,6 +1,7 @@
 package com.movieapp.tv.repository
 
 import android.util.Log
+import com.movieapp.tv.BuildConfig
 import com.movieapp.tv.api.RetrofitClient
 import com.movieapp.tv.model.Movie
 import kotlinx.coroutines.Dispatchers
@@ -8,13 +9,24 @@ import kotlinx.coroutines.withContext
 
 class MovieRepository {
     private val api = RetrofitClient.api
-    private val apiKey = "879b99242974f2ee8447dd76534e0fd8"
+    private val apiKey = BuildConfig.TMDB_API_KEY
 
     companion object {
         private const val TAG = "MovieRepository"
     }
 
+    private fun hasApiKey(): Boolean {
+        if (apiKey.isBlank()) {
+            Log.e(TAG, "TMDB API key is missing. Set tmdb.apiKey in local.properties.")
+            return false
+        }
+        return true
+    }
+
     suspend fun getPopularMovies(): List<Movie> = withContext(Dispatchers.IO) {
+        if (!hasApiKey()) {
+            return@withContext emptyList()
+        }
         return@withContext try {
             val response = api.getPopularMovies(apiKey)
             Log.d(TAG, "Fetched ${response.results.size} popular movies")
@@ -26,6 +38,9 @@ class MovieRepository {
     }
 
     suspend fun getTopRatedMovies(): List<Movie> = withContext(Dispatchers.IO) {
+        if (!hasApiKey()) {
+            return@withContext emptyList()
+        }
         return@withContext try {
             val response = api.getTopRatedMovies(apiKey)
             Log.d(TAG, "Fetched ${response.results.size} top rated movies")
@@ -37,6 +52,9 @@ class MovieRepository {
     }
 
     suspend fun getUpcomingMovies(): List<Movie> = withContext(Dispatchers.IO) {
+        if (!hasApiKey()) {
+            return@withContext emptyList()
+        }
         return@withContext try {
             val response = api.getUpcomingMovies(apiKey)
             Log.d(TAG, "Fetched ${response.results.size} upcoming movies")
@@ -48,6 +66,9 @@ class MovieRepository {
     }
 
     suspend fun getNowPlayingMovies(): List<Movie> = withContext(Dispatchers.IO) {
+        if (!hasApiKey()) {
+            return@withContext emptyList()
+        }
         return@withContext try {
             val response = api.getNowPlayingMovies(apiKey)
             Log.d(TAG, "Fetched ${response.results.size} now playing movies")
@@ -59,6 +80,9 @@ class MovieRepository {
     }
 
     suspend fun getPopularTV(): List<Movie> = withContext(Dispatchers.IO) {
+        if (!hasApiKey()) {
+            return@withContext emptyList()
+        }
         return@withContext try {
             val response = api.getPopularTV(apiKey)
             Log.d(TAG, "Fetched ${response.results.size} popular tv shows")
@@ -70,6 +94,9 @@ class MovieRepository {
     }
 
     suspend fun getTopRatedTV(): List<Movie> = withContext(Dispatchers.IO) {
+        if (!hasApiKey()) {
+            return@withContext emptyList()
+        }
         return@withContext try {
             val response = api.getTopRatedTV(apiKey)
             Log.d(TAG, "Fetched ${response.results.size} top rated tv shows")

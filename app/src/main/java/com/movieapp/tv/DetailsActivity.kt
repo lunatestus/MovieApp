@@ -1,5 +1,7 @@
 package com.movieapp.tv
 
+import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +16,7 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.movieapp.tv.model.Movie
 
 class DetailsActivity : FragmentActivity() {
 
@@ -24,9 +27,30 @@ class DetailsActivity : FragmentActivity() {
     private lateinit var ratingTextView: TextView
     private lateinit var releaseTextView: TextView
     private lateinit var backButton: Button
+    private lateinit var playButton: Button
+    private var playableUrl: String? = null
 
     companion object {
         private const val TAG = "DetailsActivity"
+        const val EXTRA_TITLE = "movie_title"
+        const val EXTRA_OVERVIEW = "movie_overview"
+        const val EXTRA_BACKDROP = "movie_backdrop"
+        const val EXTRA_POSTER = "movie_poster"
+        const val EXTRA_RATING = "movie_rating"
+        const val EXTRA_RELEASE = "movie_release"
+        const val EXTRA_VIDEO_URL = "movie_video_url"
+
+        fun createIntent(context: Context, movie: Movie, playableUrl: String? = null): Intent {
+            return Intent(context, DetailsActivity::class.java).apply {
+                putExtra(EXTRA_TITLE, movie.title)
+                putExtra(EXTRA_OVERVIEW, movie.overview)
+                putExtra(EXTRA_BACKDROP, movie.backdropPath)
+                putExtra(EXTRA_POSTER, movie.posterPath)
+                putExtra(EXTRA_RATING, movie.voteAverage)
+                putExtra(EXTRA_RELEASE, movie.releaseDate)
+                putExtra(EXTRA_VIDEO_URL, playableUrl ?: movie.videoUrl)
+            }
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,26 +70,32 @@ class DetailsActivity : FragmentActivity() {
         ratingTextView = findViewById(R.id.movie_rating)
         releaseTextView = findViewById(R.id.movie_release)
         backButton = findViewById(R.id.back_button)
+        playButton = findViewById(R.id.play_button)
 
         backButton.setOnClickListener {
             finish()
+        }
+        playButton.setOnClickListener {
+            openPlayer()
         }
     }
 
     private fun loadMovieData() {
         try {
-            val title = intent.getStringExtra("movie_title") ?: "Unknown Title"
-            val overview = intent.getStringExtra("movie_overview") ?: "No overview available."
-            val backdropPath = intent.getStringExtra("movie_backdrop")
-            val posterPath = intent.getStringExtra("movie_poster")
-            val rating = intent.getDoubleExtra("movie_rating", 0.0)
-            val releaseDate = intent.getStringExtra("movie_release") ?: "Unknown"
+            val title = intent.getStringExtra(EXTRA_TITLE) ?: "Unknown Title"
+            val overview = intent.getStringExtra(EXTRA_OVERVIEW) ?: "No overview available."
+            val backdropPath = intent.getStringExtra(EXTRA_BACKDROP)
+            val posterPath = intent.getStringExtra(EXTRA_POSTER)
+            val rating = intent.getDoubleExtra(EXTRA_RATING, 0.0)
+            val releaseDate = intent.getStringExtra(EXTRA_RELEASE) ?: "Unknown"
+            playableUrl = intent.getStringExtra(EXTRA_VIDEO_URL)
 
             // Set text data
             titleTextView.text = title
             overviewTextView.text = overview
             ratingTextView.text = String.format("★ %.1f", rating)
             releaseTextView.text = if (releaseDate.length >= 4) releaseDate.take(4) else releaseDate
+            updatePlayButtonState()
 
             // Load backdrop image
             if (!backdropPath.isNullOrEmpty()) {
@@ -137,12 +167,27 @@ class DetailsActivity : FragmentActivity() {
         }
     }
 
-    private fun setupFocusHandling() {
-        // Request focus on back button initially
-        backButton.requestFocus()
+    private fun updatePlayButtonState() {
+        val isPlayable = !playableUrl.isNullOrBlank()
+        playButton.isEnabled = isPlayable
+        playButton.alpha = if (isPlayable) 1f else 0.5f
+        playButton.text = getString(
+            if (isPlayable) R.string.play_movie else R.string.play_unavailable
+        )
+    }
 
-        // Add focus change listeners for visual feedback
-        backButton.setOnFocusChangeListener { view, hasFocus ->
+    private fun openPlayer() {
+        val videoUrl = playableUrl ?: return
+        val title = titleTextView.text?.toString().orEmpty()
+        val intent = Intent(this, PlayerActivity::class.java).apply {
+            putExtra(PlayerActivity.EXTRA_VIDEO_URL, videoUrl)
+            putExtra(PlayerActivity.EXTRA_VIDEO_TITLE, title)
+        }
+        startActivity(intent)
+    }
+
+    private fun setupFocusHandling() {
+        val buttonFocusListener = View.OnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
                 view.animate()
                     .scaleX(1.1f)
@@ -156,6 +201,15 @@ class DetailsActivity : FragmentActivity() {
                     .setDuration(150)
                     .start()
             }
+        }
+
+        backButton.onFocusChangeListener = buttonFocusListener
+        playButton.onFocusChangeListener = buttonFocusListener
+
+        if (playButton.isEnabled) {
+            playButton.requestFocus()
+        } else {
+            backButton.requestFocus()
         }
     }
 

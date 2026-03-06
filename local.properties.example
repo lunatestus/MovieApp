@@ -1,0 +1,4 @@
+sdk.dir=/path/to/android-sdk
+tmdb.apiKey=your_tmdb_api_key
+discovery.url=https://your-discovery-service.example/
+library.defaultUrl=https://your-library-service.example/

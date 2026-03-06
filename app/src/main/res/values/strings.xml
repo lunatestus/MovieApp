@@ -8,4 +8,7 @@
     <string name="upcoming">Upcoming</string>
     <string name="loading">Loading...</string>
     <string name="error_loading">Error loading movies</string>
+    <string name="back_label">&#8592; Back</string>
+    <string name="play_movie">Play</string>
+    <string name="play_unavailable">Not In Library</string>
 </resources>

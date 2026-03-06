@@ -97,11 +97,24 @@ class MainActivity : FragmentActivity() {
                     updateHeroSection(item)
                 }
             }
+
+            onItemViewClickedListener = OnItemViewClickedListener { _, item, _, _ ->
+                if (item is Movie) {
+                    startActivity(DetailsActivity.createIntent(this@MainActivity, item, findPlayableUrl(item)))
+                }
+            }
         }
 
         // Initialize adapter
         rowsAdapter = ArrayObjectAdapter(CustomListRowPresenter())
         browseSupportFragment.adapter = rowsAdapter
+    }
+
+    private fun findPlayableUrl(movie: Movie): String? {
+        return LibraryRepository(applicationContext)
+            .getCachedMovies()
+            .firstOrNull { it.id == movie.id && !it.videoUrl.isNullOrBlank() }
+            ?.videoUrl
     }
 
     private fun updateHeroSection(movie: Movie) {
