@@ -3590,7 +3590,6 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable backdrop_placeholder
-drawable bg_episode_focused
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3703,7 +3702,6 @@ drawable ic_clock_black_24dp
 drawable ic_home
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_foreground
-drawable ic_library
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -3713,7 +3711,6 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_play_circle
-drawable ic_profile
 drawable ic_search
 drawable ic_search_black_24
 drawable ic_settings
@@ -3849,7 +3846,6 @@ drawable play_button_focused_bg
 drawable player_gradient_bg
 drawable player_gradient_top_bg
 drawable player_loading_spinner
-drawable selector_episode_background
 drawable skeleton_background
 drawable spinner_ring
 drawable test_level_drawable
@@ -4180,8 +4176,6 @@ id extra
 id extra_badge
 id fade
 id fade_out_edge
-id file_thumbnail
-id file_title
 id fill
 id fill_horizontal
 id fill_vertical
@@ -4239,10 +4233,6 @@ id guidedstep_background
 id guidedstep_background_view_root
 id guidedstep_root
 id guideline
-id header_info_container
-id header_movie_rating
-id header_movie_title
-id header_movie_year
 id header_title
 id hero_background
 id hero_description
@@ -4381,7 +4371,6 @@ id month_title
 id more_actions_dock
 id motion_base
 id movie_backdrop
-id movie_header
 id movie_overview
 id movie_poster
 id movie_rating
@@ -4851,7 +4840,6 @@ layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_episode
 layout item_episode_skeleton
-layout item_file
 layout item_skeleton
 layout layout_hero_section
 layout lb_action_1_line
@@ -4932,7 +4920,6 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
-layout movie_header
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

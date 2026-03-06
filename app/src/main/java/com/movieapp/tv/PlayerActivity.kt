@@ -55,10 +55,12 @@ class PlayerActivity : FragmentActivity() {
     private val fadeAnimationDuration = 250L
 
     // Seeking configuration
+    // Seeking configuration
     private val baseSeekMs = 10_000L // 10 seconds base seek
-    private val acceleratedSeekMs = 90_000L // 90 seconds when holding (very fast)
-    private val seekAccelerationDelayMs = 200L // Time before acceleration kicks in (very quick)
-    private val seekRepeatIntervalMs = 50L // Interval for repeated seeks when holding (very fast)
+    private val acceleratedSeekMs = 60_000L // 60 seconds when holding
+    private val seekAccelerationDelayMs = 2000L // 2 seconds before acceleration kicks in
+    private val seekRepeatIntervalMs = 200L // Slower repeat interval for better control
+    private val initialSeekDelayMs = 400L // Delay before repeating starts to allow single clicks
 
     private var isSeekingForward = false
     private var isSeekingBackward = false
@@ -111,38 +113,30 @@ class PlayerActivity : FragmentActivity() {
         setupSubtitleStyle()
     }
 
+    private var loadingAnimator: android.animation.ObjectAnimator? = null
+
     private fun setupLoadingSpinner() {
-        // Start smooth fast rotation animation
-        loadingSpinner?.apply {
-            visibility = View.VISIBLE
-            animate()
-                .rotationBy(360f)
-                .setDuration(500)
-                .setInterpolator(LinearInterpolator())
-                .withEndAction(object : Runnable {
-                    override fun run() {
-                        if (visibility == View.VISIBLE) {
-                            rotation = 0f
-                            animate()
-                                .rotationBy(360f)
-                                .setDuration(500)
-                                .setInterpolator(LinearInterpolator())
-                                .withEndAction(this)
-                                .start()
-                        }
-                    }
-                })
-                .start()
+        if (loadingAnimator == null && loadingSpinner != null) {
+            loadingAnimator = android.animation.ObjectAnimator.ofFloat(loadingSpinner, View.ROTATION, 0f, 360f).apply {
+                duration = 1000 // 1 second per rotation
+                repeatCount = android.animation.ObjectAnimator.INFINITE
+                interpolator = LinearInterpolator()
+            }
         }
     }
 
     private fun showLoading() {
         loadingSpinner?.visibility = View.VISIBLE
-        setupLoadingSpinner()
+        if (loadingAnimator == null) {
+            setupLoadingSpinner()
+        }
+        if (loadingAnimator?.isStarted == false) {
+            loadingAnimator?.start()
+        }
     }
 
     private fun hideLoading() {
-        loadingSpinner?.animate()?.cancel()
+        loadingAnimator?.cancel()
         loadingSpinner?.visibility = View.GONE
     }
 
@@ -298,8 +292,8 @@ class PlayerActivity : FragmentActivity() {
         if (videoUrl == null) return
 
         player = ExoPlayer.Builder(this).build().apply {
-            // Use closest sync for smoother seeking
-            setSeekParameters(SeekParameters.CLOSEST_SYNC)
+            // Use exact seeking for precise jumps
+            setSeekParameters(SeekParameters.EXACT)
         }
         playerView.player = player
 
@@ -431,7 +425,8 @@ class PlayerActivity : FragmentActivity() {
                             isSeekingBackward = true
                             seekHoldStartTime = System.currentTimeMillis()
                             seekBy(-baseSeekMs)
-                            seekHandler.postDelayed(seekBackwardRunnable, seekRepeatIntervalMs)
+                            // Start repeating only after initial delay
+                            seekHandler.postDelayed(seekBackwardRunnable, initialSeekDelayMs)
                         }
                     }
                     FocusedControl.PLAY_PAUSE -> {
@@ -460,7 +455,8 @@ class PlayerActivity : FragmentActivity() {
                             isSeekingForward = true
                             seekHoldStartTime = System.currentTimeMillis()
                             seekBy(baseSeekMs)
-                            seekHandler.postDelayed(seekForwardRunnable, seekRepeatIntervalMs)
+                            // Start repeating only after initial delay
+                            seekHandler.postDelayed(seekForwardRunnable, initialSeekDelayMs)
                         }
                     }
                     FocusedControl.PLAY_PAUSE -> {
@@ -511,7 +507,7 @@ class PlayerActivity : FragmentActivity() {
                     isSeekingForward = true
                     seekHoldStartTime = System.currentTimeMillis()
                     seekBy(baseSeekMs)
-                    seekHandler.postDelayed(seekForwardRunnable, seekRepeatIntervalMs)
+                    seekHandler.postDelayed(seekForwardRunnable, initialSeekDelayMs)
                 }
                 return true
             }
@@ -522,7 +518,7 @@ class PlayerActivity : FragmentActivity() {
                     isSeekingBackward = true
                     seekHoldStartTime = System.currentTimeMillis()
                     seekBy(-baseSeekMs)
-                    seekHandler.postDelayed(seekBackwardRunnable, seekRepeatIntervalMs)
+                    seekHandler.postDelayed(seekBackwardRunnable, initialSeekDelayMs)
                 }
                 return true
             }

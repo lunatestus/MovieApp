@@ -36,7 +36,6 @@ dimen row_margin_bottom
 dimen row_margin_top
 dimen scrubber_enabled_size
 drawable backdrop_placeholder
-drawable bg_episode_focused
 drawable button_background
 drawable button_focused_bg_rect
 drawable capsule_button_bg
@@ -47,10 +46,8 @@ drawable hero_gradient
 drawable ic_audio_track
 drawable ic_home
 drawable ic_launcher_foreground
-drawable ic_library
 drawable ic_movie
 drawable ic_play_circle
-drawable ic_profile
 drawable ic_search
 drawable ic_settings
 drawable ic_subtitle
@@ -63,7 +60,6 @@ drawable play_button_focused_bg
 drawable player_gradient_bg
 drawable player_gradient_top_bg
 drawable player_loading_spinner
-drawable selector_episode_background
 drawable skeleton_background
 drawable spinner_ring
 drawable tv_banner
@@ -86,14 +82,8 @@ id episode_overview
 id episode_thumbnail
 id episode_title
 id et_library_url
-id file_thumbnail
-id file_title
 id gradient_overlay
 id guideline
-id header_info_container
-id header_movie_rating
-id header_movie_title
-id header_movie_year
 id hero_background
 id hero_description
 id hero_language
@@ -105,7 +95,6 @@ id hero_year
 id library_fragment
 id loading_spinner
 id movie_backdrop
-id movie_header
 id movie_overview
 id movie_poster
 id movie_rating
@@ -140,10 +129,8 @@ layout activity_settings
 layout exo_player_control_view
 layout item_episode
 layout item_episode_skeleton
-layout item_file
 layout item_skeleton
 layout layout_hero_section
-layout movie_header
 layout navbar_layout
 mipmap ic_launcher
 string app_name
