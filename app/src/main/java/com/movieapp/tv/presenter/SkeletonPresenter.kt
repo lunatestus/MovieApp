@@ -15,8 +15,11 @@ class SkeletonPresenter : Presenter() {
             .inflate(R.layout.item_skeleton, parent, false)
         
         // Add margins to match MovieCardPresenter
-        val marginInPixels = (3 * parent.context.resources.displayMetrics.density).toInt()
-        val params = ViewGroup.MarginLayoutParams(220, 330).apply {
+        val res = parent.context.resources
+        val cardWidth = res.getDimensionPixelSize(R.dimen.movie_card_width)
+        val cardHeight = res.getDimensionPixelSize(R.dimen.movie_card_height)
+        val marginInPixels = res.getDimensionPixelSize(R.dimen.movie_card_margin)
+        val params = ViewGroup.MarginLayoutParams(cardWidth, cardHeight).apply {
             setMargins(marginInPixels, marginInPixels, marginInPixels, marginInPixels)
         }
         view.layoutParams = params

@@ -15,8 +15,8 @@
     <dimen name="navbar_selector_radius">50dp</dimen>
 
     <!-- Card Dimensions -->
-    <dimen name="movie_card_width">220dp</dimen>
-    <dimen name="movie_card_height">330dp</dimen>
+    <dimen name="movie_card_width">180dp</dimen>
+    <dimen name="movie_card_height">270dp</dimen>
     <dimen name="movie_card_margin">3dp</dimen>
     <dimen name="movie_card_selected_elevation">16dp</dimen>
 
