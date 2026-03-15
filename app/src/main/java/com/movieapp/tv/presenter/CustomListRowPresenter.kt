@@ -35,17 +35,14 @@ class CustomListRowPresenter : ListRowPresenter() {
         // Adjust header height and margins
         holder.headerViewHolder?.view?.let { headerView ->
             val headerLp = headerView.layoutParams
-            headerLp?.height = res.getDimensionPixelSize(R.dimen.row_header_height)
+            headerLp?.height = 0
             headerView.layoutParams = headerLp
-            
+            headerView.visibility = android.view.View.GONE
+
             (headerLp as? ViewGroup.MarginLayoutParams)?.apply {
-                topMargin = res.getDimensionPixelSize(R.dimen.row_header_margin_top)
-                bottomMargin = res.getDimensionPixelSize(R.dimen.row_header_margin_bottom)
+                topMargin = 0
+                bottomMargin = 0
             }
-            
-            // Change header text color to white
-            val headerTextView = headerView.findViewById<android.widget.TextView>(android.R.id.title)
-            headerTextView?.setTextColor(android.graphics.Color.WHITE)
         }
     }
 }

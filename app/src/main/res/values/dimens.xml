@@ -33,9 +33,9 @@
     <dimen name="row_header_height">36dp</dimen>
     <dimen name="row_header_margin_top">4dp</dimen>
     <dimen name="row_header_margin_bottom">6dp</dimen>
-    <dimen name="row_margin_top">6dp</dimen>
-    <dimen name="row_margin_bottom">6dp</dimen>
-    <dimen name="browse_rows_vertical_spacing">8dp</dimen>
+    <dimen name="row_margin_top">2dp</dimen>
+    <dimen name="row_margin_bottom">2dp</dimen>
+    <dimen name="browse_rows_vertical_spacing">6dp</dimen>
     <dimen name="browse_rows_top_padding_extra">24dp</dimen>
     <dimen name="browse_rows_bottom_padding_extra">24dp</dimen>
     
