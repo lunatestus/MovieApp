@@ -31,11 +31,12 @@
     
     <!-- List Row Dimensions -->
     <dimen name="row_header_height">34dp</dimen>
-    <dimen name="row_header_margin_top">6dp</dimen>
-    <dimen name="row_header_margin_bottom">4dp</dimen>
-    <dimen name="row_margin_top">4dp</dimen>
-    <dimen name="row_margin_bottom">4dp</dimen>
-    <dimen name="browse_rows_vertical_spacing">6dp</dimen>
+    <dimen name="row_header_margin_top">8dp</dimen>
+    <dimen name="row_header_margin_bottom">6dp</dimen>
+    <dimen name="row_margin_top">6dp</dimen>
+    <dimen name="row_margin_bottom">6dp</dimen>
+    <dimen name="browse_rows_vertical_spacing">8dp</dimen>
+    <dimen name="browse_rows_top_padding_extra">12dp</dimen>
     
     <!-- Player Dimensions -->
     <dimen name="scrubber_enabled_size">12dp</dimen>

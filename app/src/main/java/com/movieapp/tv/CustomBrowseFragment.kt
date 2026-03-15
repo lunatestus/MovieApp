@@ -43,7 +43,8 @@ class CustomBrowseFragment : RowsSupportFragment() {
             verticalGridView?.let { gridView ->
                 // Force padding to remove massive default padding from BrowseSupportFragment
                 val navbarHeight = resources.getDimensionPixelSize(R.dimen.navbar_height)
-                gridView.setPadding(0, navbarHeight, 0, 0)
+                val extraTopPadding = resources.getDimensionPixelSize(R.dimen.browse_rows_top_padding_extra)
+                gridView.setPadding(0, navbarHeight + extraTopPadding, 0, 0)
                 gridView.clipToPadding = false
 
                 // Configure window alignment for perfect row positioning
