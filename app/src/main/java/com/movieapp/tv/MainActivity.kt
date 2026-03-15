@@ -126,10 +126,15 @@ class MainActivity : FragmentActivity() {
         heroLanguage.text = movie.getFormattedLanguage()
 
         // Load background image
-        Glide.with(this)
-            .load(movie.getBackdropUrl())
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .into(heroBackground)
+        val backdropUrl = movie.getBackdropUrl()
+        if (backdropUrl.isBlank()) {
+            heroBackground.setImageResource(R.drawable.backdrop_placeholder)
+        } else {
+            Glide.with(this)
+                .load(backdropUrl)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(heroBackground)
+        }
     }
 
     private fun observeViewModel() {
@@ -171,6 +176,22 @@ class MainActivity : FragmentActivity() {
         }
         if (state.topRatedTv.isNotEmpty()) {
             addMovieRow(adapter, 5, "Top Rated TV Shows", state.topRatedTv)
+        }
+
+        val firstItem = state.nowPlaying.firstOrNull()
+            ?: state.popular.firstOrNull()
+            ?: state.topRated.firstOrNull()
+            ?: state.upcoming.firstOrNull()
+            ?: state.popularTv.firstOrNull()
+            ?: state.topRatedTv.firstOrNull()
+
+        if (firstItem != null) {
+            updateHeroSection(firstItem)
+        } else {
+            heroMetadataContainer.visibility = View.GONE
+            heroTitle.text = ""
+            heroDescription.text = ""
+            heroBackground.setImageResource(R.drawable.backdrop_placeholder)
         }
     }
 

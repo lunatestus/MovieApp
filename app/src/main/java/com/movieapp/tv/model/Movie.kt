@@ -52,6 +52,9 @@ data class Movie(
     }
     
     fun getBackdropUrl(): String {
+        if (backdropPath.isNullOrEmpty()) {
+            return ""
+        }
         return "https://image.tmdb.org/t/p/original$backdropPath"
     }
 

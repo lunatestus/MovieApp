@@ -54,7 +54,13 @@ class MainViewModel : ViewModel() {
                 val popularTv = popularTvDeferred.await()
                 val topRatedTv = topRatedTvDeferred.await()
 
-                if (nowPlaying.isEmpty() && popular.isEmpty() && topRated.isEmpty() && upcoming.isEmpty()) {
+                if (nowPlaying.isEmpty() &&
+                    popular.isEmpty() &&
+                    topRated.isEmpty() &&
+                    upcoming.isEmpty() &&
+                    popularTv.isEmpty() &&
+                    topRatedTv.isEmpty()
+                ) {
                     _uiState.value = MainUiState.Error("No movies found. Please check your internet connection.")
                 } else {
                     _uiState.value = MainUiState.Success(

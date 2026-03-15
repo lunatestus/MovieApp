@@ -17,21 +17,23 @@ import com.movieapp.tv.model.Movie
 class MovieCardPresenter : Presenter() {
     
     companion object {
-        private const val CARD_WIDTH = 220
-        private const val CARD_HEIGHT = 330
         private const val FOCUSED_SCALE = 1.1f
         private const val UNFOCUSED_SCALE = 1.0f
         private const val ANIMATION_DURATION = 150L
     }
     
     override fun onCreateViewHolder(parent: ViewGroup): ViewHolder {
+        val res = parent.context.resources
+        val cardWidth = res.getDimensionPixelSize(R.dimen.movie_card_width)
+        val cardHeight = res.getDimensionPixelSize(R.dimen.movie_card_height)
+        val marginInPixels = res.getDimensionPixelSize(R.dimen.movie_card_margin)
+
         val imageView = ImageView(parent.context).apply {
             isFocusable = true
             isFocusableInTouchMode = true
             
             // Add margins for spacing between posters - reduced for tighter layout
-            val marginInPixels = (3 * context.resources.displayMetrics.density).toInt()
-            layoutParams = ViewGroup.MarginLayoutParams(CARD_WIDTH, CARD_HEIGHT).apply {
+            layoutParams = ViewGroup.MarginLayoutParams(cardWidth, cardHeight).apply {
                 setMargins(marginInPixels, marginInPixels, marginInPixels, marginInPixels)
             }
             

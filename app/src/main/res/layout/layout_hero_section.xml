@@ -22,9 +22,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="@dimen/hero_margin_start"
+        android:layout_marginTop="@dimen/hero_margin_top"
+        android:layout_marginEnd="@dimen/hero_margin_end"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
+            android:textSize="@dimen/hero_title_size"
             android:textStyle="bold"
             android:maxLines="1"
             android:ellipsize="end"
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:visibility="invisible"
+            android:visibility="gone"
             android:layout_marginTop="8dp">
 
             <TextView
@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/accent"
-                android:textSize="14sp"
+                android:textSize="@dimen/hero_metadata_size"
                 android:textStyle="bold"
                 tools:text="8.5" />
 
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#E6FFFFFF"
-                android:textSize="14sp"
+                android:textSize="@dimen/hero_metadata_size"
                 tools:text="2024" />
 
             <TextView
@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#E6FFFFFF"
-                android:textSize="14sp"
+                android:textSize="@dimen/hero_metadata_size"
                 tools:text="English" />
         </LinearLayout>
 
@@ -96,10 +96,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:textColor="#B3FFFFFF"
-            android:textSize="14sp"
+            android:textSize="@dimen/hero_description_size"
             android:maxLines="3"
             android:ellipsize="end"
-            android:lineSpacingExtra="4dp"
+            android:lineSpacingExtra="@dimen/hero_description_line_spacing"
             tools:text="Movie description goes here. This is a sample text to show how the description will look like on the hero section." />
 
     </LinearLayout>
