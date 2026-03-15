@@ -30,7 +30,6 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           cache-cleanup: never
-          cache-read-only: true
 
       - name: Prepare local.properties
         run: |
