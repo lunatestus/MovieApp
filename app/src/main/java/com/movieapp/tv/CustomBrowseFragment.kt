@@ -18,11 +18,6 @@ class CustomBrowseFragment : RowsSupportFragment() {
 
     private val handler = Handler(Looper.getMainLooper())
     
-    companion object {
-        // Offset to ensure rows start at the correct position within the bottom half of the split screen
-        private const val ROW_ALIGNMENT_OFFSET_DP = 20
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
@@ -42,17 +37,14 @@ class CustomBrowseFragment : RowsSupportFragment() {
             
             verticalGridView?.let { gridView ->
                 // Force padding to remove massive default padding from BrowseSupportFragment
-                val navbarHeight = resources.getDimensionPixelSize(R.dimen.navbar_height)
                 val extraTopPadding = resources.getDimensionPixelSize(R.dimen.browse_rows_top_padding_extra)
-                gridView.setPadding(0, navbarHeight + extraTopPadding, 0, 0)
+                val extraBottomPadding = resources.getDimensionPixelSize(R.dimen.browse_rows_bottom_padding_extra)
+                gridView.setPadding(0, extraTopPadding, 0, extraBottomPadding)
                 gridView.clipToPadding = false
 
                 // Configure window alignment for perfect row positioning
-                // windowAlignmentOffset: Distance from top of screen where items should align
-                // Since the fragment starts at the middle of the screen, we want items to align
-                // near the top of the fragment container
-                val offsetPixels = (ROW_ALIGNMENT_OFFSET_DP * resources.displayMetrics.density).toInt()
-                gridView.windowAlignmentOffset = offsetPixels
+                // Keep items aligned within the fragment bounds to avoid header clipping
+                gridView.windowAlignmentOffset = 0
                 
                 // Disable percentage-based alignment to use fixed offset
                 gridView.windowAlignmentOffsetPercent = VerticalGridView.WINDOW_ALIGN_OFFSET_PERCENT_DISABLED
@@ -65,7 +57,7 @@ class CustomBrowseFragment : RowsSupportFragment() {
                 gridView.itemAlignmentOffsetPercent = 0f
                 
                 // Set window alignment to ensure proper positioning
-                gridView.windowAlignment = VerticalGridView.WINDOW_ALIGN_LOW_EDGE
+                gridView.windowAlignment = VerticalGridView.WINDOW_ALIGN_NO_EDGE
                 
                 // Set vertical spacing between rows
                 gridView.verticalSpacing = resources.getDimensionPixelSize(R.dimen.browse_rows_vertical_spacing)
