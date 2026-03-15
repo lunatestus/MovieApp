@@ -30,12 +30,12 @@
     <dimen name="hero_description_line_spacing">6dp</dimen>
     
     <!-- List Row Dimensions -->
-    <dimen name="row_header_height">28dp</dimen>
-    <dimen name="row_header_margin_top">4dp</dimen>
-    <dimen name="row_header_margin_bottom">2dp</dimen>
-    <dimen name="row_margin_top">2dp</dimen>
-    <dimen name="row_margin_bottom">2dp</dimen>
-    <dimen name="browse_rows_vertical_spacing">4dp</dimen>
+    <dimen name="row_header_height">34dp</dimen>
+    <dimen name="row_header_margin_top">6dp</dimen>
+    <dimen name="row_header_margin_bottom">4dp</dimen>
+    <dimen name="row_margin_top">4dp</dimen>
+    <dimen name="row_margin_bottom">4dp</dimen>
+    <dimen name="browse_rows_vertical_spacing">6dp</dimen>
     
     <!-- Player Dimensions -->
     <dimen name="scrubber_enabled_size">12dp</dimen>
