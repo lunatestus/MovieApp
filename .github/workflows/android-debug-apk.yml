@@ -29,9 +29,16 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Create local.properties
+      - name: Prepare local.properties
         run: |
+          if [ -f local.properties ]; then
+            grep -v '^sdk.dir=' local.properties > local.properties.tmp
+          else
+            touch local.properties.tmp
+          fi
           echo "sdk.dir=${ANDROID_SDK_ROOT}" > local.properties
+          cat local.properties.tmp >> local.properties
+          rm -f local.properties.tmp
 
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
