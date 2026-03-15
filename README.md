@@ -1,16 +1,13 @@
 # Movie App for Android TV
 
-A completely redesigned Android TV movie browsing application with excellent D-pad navigation, modern UI, and support for both Movies and TV Series.
+A completely redesigned Android TV movie browsing application with excellent D-pad navigation and a modern UI.
 
 ## Features
 
 ### Core Functionality
 - **Browse Movies**: View movies in multiple categories (Now Playing, Popular, Top Rated, Upcoming).
-- **Browse Series**: Dedicated section for TV Series with folder-based navigation.
-- **Episode Playback**: View episodes in a refined grid layout and play them.
-- **Movie Details**: See detailed information including poster, backdrop, rating, release date, and overview.
 - **Smooth D-pad Navigation**: Optimized Leanback framework implementation with perfect focus handling.
-- **TMDB Integration**: Real-time movie and series data from The Movie Database API.
+- **TMDB Integration**: Real-time movie data from The Movie Database API.
 - **Local Library**: Browse and play content from your local server.
 
 ### Technical Improvements
@@ -18,7 +15,7 @@ A completely redesigned Android TV movie browsing application with excellent D-p
 #### 1. **Enhanced Navigation**
 - Preserved excellent Leanback D-pad navigation.
 - Smooth focus transitions with scale animations.
-- **Navbar Integration**: Seamless navigation between Home, Movies, Series, and Search.
+- **Navbar Integration**: Seamless navigation between Home, Movies, Search, and Settings.
 - **Custom Focus Handling**: Specialized logic for navigating between fragments and the navbar.
 
 #### 2. **Better Architecture**
@@ -32,10 +29,6 @@ A completely redesigned Android TV movie browsing application with excellent D-p
     - Edge-to-edge images.
     - Subtle rounded corners (5dp).
     - Refined typography and spacing.
-- **Series Section**:
-    - Folder-based structure for series and seasons.
-    - 3-row skeleton loading state.
-    - Optimized grid layout for episodes (4 cards per row).
 - Gradient overlays for better text readability.
 - Smooth animations on focus changes.
 
@@ -65,22 +58,15 @@ A completely redesigned Android TV movie browsing application with excellent D-p
 ### MainActivity
 - BrowseSupportFragment for main browsing interface.
 - Hosts the main navigation bar.
-- Manages fragment transactions for Home, Movies, Series, and Search.
-
-### SeriesActivity & SeriesDetailsFragment
-- Dedicated activity for TV Series.
-- **SeriesDetailsFragment**: Handles the display of episodes in a grid.
-- Custom `EpisodePresenter` for rendering episode cards.
-- Implements `handleUpKey` for seamless D-pad navigation back to the navbar.
+- Manages fragment transactions for Home and Movies navigation.
 
 ### Presenters
 - **MovieCardPresenter**: Custom presenter for movie cards with focus animations.
-- **EpisodePresenter**: Specialized presenter for episode items with edge-to-edge design.
 - **SkeletonPresenter**: Handles loading states with pulsing animations.
 
 ### Repositories
 - **MovieRepository**: Fetches data from TMDB.
-- **LibraryRepository**: Manages local library content, including folder navigation for series.
+- **LibraryRepository**: Manages local library content.
 
 ## D-pad Navigation Features
 
@@ -117,4 +103,3 @@ For production, replace with your own key in `MovieRepository.kt`.
 - Cast information
 - Similar movies recommendations
 - Multiple language support
-

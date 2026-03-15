@@ -67,11 +67,6 @@ class LibraryActivity : FragmentActivity() {
             // Already on Movies page
         }
 
-        bindNav(findViewById(R.id.nav_series)) {
-            startActivity(Intent(this, SeriesActivity::class.java))
-            finish()
-        }
-
         bindNav(findViewById(R.id.nav_search)) {
             startActivity(Intent(this, SearchActivity::class.java))
             finish()

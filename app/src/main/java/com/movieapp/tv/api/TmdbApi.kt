@@ -13,11 +13,6 @@ interface TmdbApi {
         @Query("api_key") apiKey: String
     ): Movie
 
-    @GET("tv/{tv_id}")
-    suspend fun getTvDetails(
-        @Path("tv_id") tvId: String,
-        @Query("api_key") apiKey: String
-    ): Movie
     @GET("movie/popular")
     suspend fun getPopularMovies(
         @Query("api_key") apiKey: String,
@@ -42,15 +37,4 @@ interface TmdbApi {
         @Query("page") page: Int = 1
     ): MovieResponse
 
-    @GET("tv/popular")
-    suspend fun getPopularTV(
-        @Query("api_key") apiKey: String,
-        @Query("page") page: Int = 1
-    ): MovieResponse
-
-    @GET("tv/top_rated")
-    suspend fun getTopRatedTV(
-        @Query("api_key") apiKey: String,
-        @Query("page") page: Int = 1
-    ): MovieResponse
 }

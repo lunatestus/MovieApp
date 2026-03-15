@@ -44,11 +44,6 @@ class SearchActivity : FragmentActivity() {
             finish()
         }
 
-        bindNav(findViewById(R.id.nav_series)) {
-            startActivity(Intent(this, SeriesActivity::class.java))
-            finish()
-        }
-
         bindNav(findViewById(R.id.nav_search)) {
             // Already on Search page
         }

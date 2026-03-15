@@ -16,9 +16,7 @@ sealed class MainUiState {
         val nowPlaying: List<Movie>,
         val popular: List<Movie>,
         val topRated: List<Movie>,
-        val upcoming: List<Movie>,
-        val popularTv: List<Movie>,
-        val topRatedTv: List<Movie>
+        val upcoming: List<Movie>
     ) : MainUiState()
     data class Error(val message: String) : MainUiState()
 }
@@ -44,22 +42,15 @@ class MainViewModel : ViewModel() {
                 val popularDeferred = async { repository.getPopularMovies() }
                 val topRatedDeferred = async { repository.getTopRatedMovies() }
                 val upcomingDeferred = async { repository.getUpcomingMovies() }
-                val popularTvDeferred = async { repository.getPopularTV() }
-                val topRatedTvDeferred = async { repository.getTopRatedTV() }
-
                 val nowPlaying = nowPlayingDeferred.await()
                 val popular = popularDeferred.await()
                 val topRated = topRatedDeferred.await()
                 val upcoming = upcomingDeferred.await()
-                val popularTv = popularTvDeferred.await()
-                val topRatedTv = topRatedTvDeferred.await()
 
                 if (nowPlaying.isEmpty() &&
                     popular.isEmpty() &&
                     topRated.isEmpty() &&
-                    upcoming.isEmpty() &&
-                    popularTv.isEmpty() &&
-                    topRatedTv.isEmpty()
+                    upcoming.isEmpty()
                 ) {
                     _uiState.value = MainUiState.Error("No movies found. Please check your internet connection.")
                 } else {
@@ -67,9 +58,7 @@ class MainViewModel : ViewModel() {
                         nowPlaying = nowPlaying,
                         popular = popular,
                         topRated = topRated,
-                        upcoming = upcoming,
-                        popularTv = popularTv,
-                        topRatedTv = topRatedTv
+                        upcoming = upcoming
                     )
                 }
             } catch (e: Exception) {

@@ -30,11 +30,6 @@
         </activity>
 
         <activity
-            android:name=".DetailsActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-
-        <activity
             android:name=".LibraryActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
@@ -46,16 +41,6 @@
 
         <activity
             android:name=".SettingsActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-
-        <activity
-            android:name=".SeriesActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-
-        <activity
-            android:name=".SeriesDetailsActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
 

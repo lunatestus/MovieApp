@@ -155,19 +155,10 @@ class MainActivity : FragmentActivity() {
         if (state.upcoming.isNotEmpty()) {
             addMovieRow(adapter, 3, "Upcoming", state.upcoming)
         }
-        if (state.popularTv.isNotEmpty()) {
-            addMovieRow(adapter, 4, "Popular TV Shows", state.popularTv)
-        }
-        if (state.topRatedTv.isNotEmpty()) {
-            addMovieRow(adapter, 5, "Top Rated TV Shows", state.topRatedTv)
-        }
-
         val firstItem = state.nowPlaying.firstOrNull()
             ?: state.popular.firstOrNull()
             ?: state.topRated.firstOrNull()
             ?: state.upcoming.firstOrNull()
-            ?: state.popularTv.firstOrNull()
-            ?: state.topRatedTv.firstOrNull()
 
         if (firstItem != null) {
             updateHeroSection(firstItem)
@@ -212,11 +203,6 @@ class MainActivity : FragmentActivity() {
 
         bindNav(navbarBinding.navMovies) {
             startActivity(Intent(this, LibraryActivity::class.java))
-            finish()
-        }
-
-        bindNav(navbarBinding.navSeries) {
-            startActivity(Intent(this, SeriesActivity::class.java))
             finish()
         }
 
