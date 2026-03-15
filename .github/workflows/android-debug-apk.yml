@@ -26,9 +26,6 @@ jobs:
       - name: Set up Gradle (with caching)
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Prepare local.properties
         run: |
           if [ -f local.properties ]; then
@@ -36,7 +33,7 @@ jobs:
           else
             touch local.properties.tmp
           fi
-          echo "sdk.dir=${ANDROID_SDK_ROOT}" > local.properties
+          echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
           cat local.properties.tmp >> local.properties
           rm -f local.properties.tmp
 
