@@ -201,26 +201,35 @@ class MainActivity : FragmentActivity() {
     }
 
     private fun setupNavbar() {
-        navbarBinding.navHome.setOnClickListener {
+        fun bindNav(view: View, action: () -> Unit) {
+            view.setOnClickListener { action() }
+            view.setOnFocusChangeListener { _, hasFocus ->
+                if (hasFocus) {
+                    action()
+                }
+            }
+        }
+
+        bindNav(navbarBinding.navHome) {
             // Already on home - do nothing
         }
 
-        navbarBinding.navMovies.setOnClickListener {
+        bindNav(navbarBinding.navMovies) {
             startActivity(Intent(this, LibraryActivity::class.java))
             finish()
         }
 
-        navbarBinding.navSeries.setOnClickListener {
+        bindNav(navbarBinding.navSeries) {
             startActivity(Intent(this, SeriesActivity::class.java))
             finish()
         }
 
-        navbarBinding.navSearch.setOnClickListener {
+        bindNav(navbarBinding.navSearch) {
             startActivity(Intent(this, SearchActivity::class.java))
             finish()
         }
 
-        navbarBinding.navSettings.setOnClickListener {
+        bindNav(navbarBinding.navSettings) {
             startActivity(Intent(this, SettingsActivity::class.java))
             finish()
         }

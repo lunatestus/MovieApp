@@ -3,7 +3,7 @@
     <!-- Focused state -->
     <item android:state_focused="true">
         <shape android:shape="rectangle">
-            <solid android:color="#33FFFFFF" />
+            <solid android:color="#FFFFFFFF" />
             <corners android:radius="50dp" />
         </shape>
     </item>
@@ -11,7 +11,7 @@
     <!-- Pressed state -->
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <solid android:color="#11FFFFFF" />
+            <solid android:color="#DDFFFFFF" />
             <corners android:radius="50dp" />
         </shape>
     </item>
@@ -19,7 +19,7 @@
     <!-- Default state -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@android:color/transparent" />
+            <solid android:color="#22FFFFFF" />
             <corners android:radius="50dp" />
         </shape>
     </item>

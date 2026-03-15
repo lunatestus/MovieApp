@@ -48,31 +48,38 @@ class SettingsActivity : FragmentActivity() {
     }
 
     private fun setupNavbar() {
-        findViewById<LinearLayout>(R.id.nav_home).setOnClickListener {
+        fun bindNav(view: LinearLayout, action: () -> Unit) {
+            view.setOnClickListener { action() }
+            view.setOnFocusChangeListener { _, hasFocus ->
+                if (hasFocus) {
+                    action()
+                }
+            }
+        }
+
+        bindNav(findViewById(R.id.nav_home)) {
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intent)
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.nav_movies).setOnClickListener {
+        bindNav(findViewById(R.id.nav_movies)) {
             startActivity(Intent(this, LibraryActivity::class.java))
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.nav_series).setOnClickListener {
+        bindNav(findViewById(R.id.nav_series)) {
             startActivity(Intent(this, SeriesActivity::class.java))
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.nav_search).setOnClickListener {
+        bindNav(findViewById(R.id.nav_search)) {
             startActivity(Intent(this, SearchActivity::class.java))
             finish()
         }
 
-
-
-        findViewById<LinearLayout>(R.id.nav_settings).setOnClickListener {
+        bindNav(findViewById(R.id.nav_settings)) {
             // Already on Settings page
         }
     }

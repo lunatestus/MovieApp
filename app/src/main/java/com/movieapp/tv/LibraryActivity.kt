@@ -49,28 +49,35 @@ class LibraryActivity : FragmentActivity() {
     }
 
     private fun setupNavbar() {
-        findViewById<LinearLayout>(R.id.nav_home).setOnClickListener {
+        fun bindNav(view: LinearLayout, action: () -> Unit) {
+            view.setOnClickListener { action() }
+            view.setOnFocusChangeListener { _, hasFocus ->
+                if (hasFocus) {
+                    action()
+                }
+            }
+        }
+
+        bindNav(findViewById(R.id.nav_home)) {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.nav_movies).setOnClickListener {
+        bindNav(findViewById(R.id.nav_movies)) {
             // Already on Movies page
         }
 
-        findViewById<LinearLayout>(R.id.nav_series).setOnClickListener {
+        bindNav(findViewById(R.id.nav_series)) {
             startActivity(Intent(this, SeriesActivity::class.java))
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.nav_search).setOnClickListener {
+        bindNav(findViewById(R.id.nav_search)) {
             startActivity(Intent(this, SearchActivity::class.java))
             finish()
         }
 
-
-
-        findViewById<LinearLayout>(R.id.nav_settings).setOnClickListener {
+        bindNav(findViewById(R.id.nav_settings)) {
             startActivity(Intent(this, SettingsActivity::class.java))
             finish()
         }
