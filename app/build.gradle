@@ -18,9 +18,26 @@ def asBuildConfigString = { value ->
     return "\"${safeValue}\""
 }
 
+def signingStoreFile = System.getenv("SIGNING_STORE_FILE") ?: localProperties.getProperty("signing.storeFile", "")
+def signingStorePassword = System.getenv("SIGNING_STORE_PASSWORD") ?: localProperties.getProperty("signing.storePassword", "")
+def signingKeyAlias = System.getenv("SIGNING_KEY_ALIAS") ?: localProperties.getProperty("signing.keyAlias", "")
+def signingKeyPassword = System.getenv("SIGNING_KEY_PASSWORD") ?: localProperties.getProperty("signing.keyPassword", "")
+def hasCiSigning = signingStoreFile && signingStorePassword && signingKeyAlias && signingKeyPassword
+
 android {
     namespace 'com.movieapp.tv'
     compileSdk 34
+
+    if (hasCiSigning) {
+        signingConfigs {
+            ci {
+                storeFile file(signingStoreFile)
+                storePassword signingStorePassword
+                keyAlias signingKeyAlias
+                keyPassword signingKeyPassword
+            }
+        }
+    }
 
     defaultConfig {
         applicationId "com.movieapp.tv"
@@ -34,9 +51,17 @@ android {
     }
 
     buildTypes {
+        debug {
+            if (hasCiSigning) {
+                signingConfig signingConfigs.ci
+            }
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (hasCiSigning) {
+                signingConfig signingConfigs.ci
+            }
         }
     }
     
