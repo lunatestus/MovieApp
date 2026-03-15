@@ -58,7 +58,8 @@
         android:paddingStart="@dimen/navbar_item_padding_horizontal"
         android:paddingEnd="@dimen/navbar_item_padding_horizontal"
         android:paddingTop="@dimen/navbar_item_padding_vertical"
-        android:paddingBottom="@dimen/navbar_item_padding_vertical">
+        android:paddingBottom="@dimen/navbar_item_padding_vertical"
+        android:layout_marginEnd="@dimen/navbar_item_spacing">
 
         <ImageView
             android:id="@+id/nav_movies_icon"

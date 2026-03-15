@@ -86,11 +86,7 @@ class MainActivity : FragmentActivity() {
                 }
             }
 
-            onItemViewClickedListener = OnItemViewClickedListener { _, item, _, _ ->
-                if (item is Movie) {
-                    startActivity(DetailsActivity.createIntent(this@MainActivity, item, findPlayableUrl(item)))
-                }
-            }
+            onItemViewClickedListener = null
         }
 
         // Initialize adapter
