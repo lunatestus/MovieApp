@@ -48,7 +48,7 @@ class MainActivity : FragmentActivity() {
         browseSupportFragment = supportFragmentManager
             .findFragmentById(R.id.browse_fragment) as CustomBrowseFragment
 
-        heroBinding = LayoutHeroSectionBinding.bind(binding.heroSection)
+        heroBinding = binding.heroSection
         navbarBinding = NavbarLayoutBinding.bind(binding.root.findViewById(R.id.navbar))
 
         setupUI()
