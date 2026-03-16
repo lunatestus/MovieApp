@@ -8,66 +8,29 @@
     <!-- Navbar -->
     <include layout="@layout/navbar_layout" />
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="32dp">
+            android:text="Settings"
+            android:textColor="@color/text_primary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Settings"
-                android:textColor="@color/text_primary"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="32dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coming soon"
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp" />
 
-            <!-- API Configuration Section -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="API Configuration"
-                android:textColor="@color/accent"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Library Server URL"
-                android:textColor="@color/text_secondary"
-                android:layout_marginBottom="8dp" />
-
-            <EditText
-                android:id="@+id/et_library_url"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/navbar_item_selector"
-                android:padding="16dp"
-                android:textColor="@color/white"
-                android:hint="https://your-api-url.com/"
-                android:textColorHint="#80FFFFFF"
-                android:inputType="textUri"
-                android:imeOptions="actionDone"
-                android:layout_marginBottom="24dp" />
-
-            <Button
-                android:id="@+id/btn_save_settings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Save Changes"
-                android:paddingHorizontal="32dp"
-                android:paddingVertical="12dp"
-                android:backgroundTint="@color/brand_color"
-                android:textColor="@color/white" />
-
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </LinearLayout>

@@ -45,7 +45,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Movies -->
+    <!-- Library -->
     <LinearLayout
         android:id="@+id/nav_movies"
         android:layout_width="wrap_content"
@@ -66,7 +66,7 @@
             android:layout_width="@dimen/navbar_icon_size"
             android:layout_height="@dimen/navbar_icon_size"
             android:src="@drawable/ic_movie"
-            android:contentDescription="Movies"
+            android:contentDescription="Library"
             android:layout_marginEnd="@dimen/navbar_item_icon_margin"
             android:duplicateParentState="true"
             android:tint="@color/navbar_icon_selector" />
@@ -74,7 +74,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MOVIES"
+            android:text="LIBRARY"
             android:duplicateParentState="true"
             android:textColor="@color/navbar_text_selector"
             android:textSize="@dimen/navbar_text_size"

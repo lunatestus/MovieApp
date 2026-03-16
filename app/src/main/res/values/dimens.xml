@@ -39,6 +39,4 @@
     <dimen name="browse_rows_top_padding_extra">24dp</dimen>
     <dimen name="browse_rows_bottom_padding_extra">24dp</dimen>
     
-    <!-- Player Dimensions -->
-    <dimen name="scrubber_enabled_size">12dp</dimen>
 </resources>

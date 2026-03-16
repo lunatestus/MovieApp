@@ -1,6 +1,5 @@
 package com.movieapp.tv
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.leanback.app.RowsSupportFragment
@@ -27,8 +26,6 @@ class LibraryFragment : RowsSupportFragment() {
         super.onCreate(savedInstanceState)
         
         setupFragment()
-        setupEventListeners()
-        
         viewModel = ViewModelProvider(this)[LibraryViewModel::class.java]
         observeViewModel()
     }
@@ -56,17 +53,6 @@ class LibraryFragment : RowsSupportFragment() {
         // Use the library list row presenter for seamless grid look
         rowsAdapter = ArrayObjectAdapter(LibraryListRowPresenter())
         adapter = rowsAdapter
-    }
-
-    private fun setupEventListeners() {
-        onItemViewClickedListener = OnItemViewClickedListener { _, item, _, _ ->
-            if (item is Movie) {
-                val intent = Intent(requireContext(), PlayerActivity::class.java)
-                intent.putExtra(PlayerActivity.EXTRA_VIDEO_URL, item.videoUrl)
-                intent.putExtra(PlayerActivity.EXTRA_VIDEO_TITLE, item.title)
-                startActivity(intent)
-            }
-        }
     }
 
     private fun observeViewModel() {
